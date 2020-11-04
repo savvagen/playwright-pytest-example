@@ -1,8 +1,0 @@
-playwright==0.151.1
-pytest-playwright==0.0.7
-requests
-pytest-xdist
-faker
-PyHamcrest
-allure-pytest
-pytest-rerunfailures
