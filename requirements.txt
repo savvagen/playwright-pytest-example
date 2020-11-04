@@ -1,0 +1,8 @@
+playwright
+pytest-playwright
+requests
+pytest-xdist
+faker
+PyHamcrest
+allure-pytest
+pytest-rerunfailures
