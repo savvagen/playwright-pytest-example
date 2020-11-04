@@ -23,7 +23,7 @@ class MyViewTests(TestCase):
         page.context.clearCookies()
         page.goto('%s/#/login' % base_url)
         page.fill('input[type="email"]', "savva.genchevskiy@gmail.com")
-        page.fill('input[type="password"]', "S.gench19021992")
+        page.fill('input[type="password"]', "test.12345678")
         page.click('button[type="submit"]')  # page.click('text="Sign in"')
         assert page.innerText('a[href="#@savva.genchevskiy"]') == 'savva.genchevskiy'
         assert "%s/#/" % base_url in page.url
