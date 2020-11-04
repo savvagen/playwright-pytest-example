@@ -12,6 +12,8 @@ class MyViewTests(TestCase):
     def setUpClass(self):
         self.playwright = sync_playwright().start()
         self.browser = self.playwright.chromium.launch(headless=False)
+        # Connect to moon cluster
+        # self.browser = self.playwright.chromium.connect(timeout=0, wsEndpoint="ws://moon.example.com:4444/playwright/chromium?headless=false")
 
     @classmethod
     def tearDownClass(self):
@@ -27,7 +29,7 @@ class MyViewTests(TestCase):
         page.click('button[type="submit"]')  # page.click('text="Sign in"')
         assert page.innerText('a[href="#@savva.genchevskiy"]') == 'savva.genchevskiy'
         assert "%s/#/" % base_url in page.url
-        page.screenshot(path='../logged_in.png')
+        page.screenshot(path='screenshots/logged_in.png')
         page.close()
 
     # def setUp(self):
