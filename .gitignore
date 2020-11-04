@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+Pipfile.lock
+**/__pycache__/
+**/.pytest_cache/
+**/allure-results/
+#**/screenshots/*.png
+#**/video/*.webm

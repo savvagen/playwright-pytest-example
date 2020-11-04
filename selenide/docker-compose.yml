@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  selenoid:
+    container_name: selenoid
+    network_mode: bridge
+    image: aerokube/selenoid:latest-release
+    volumes:
+      - "./:/etc/selenoid"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    command: [
+      "-conf", "/etc/selenoid/browsers.json",
+      "-service-startup-timeout", "3m0s",
+      "-session-attempt-timeout", "3m0s",
+      "-session-delete-timeout", "3m0s",
+      "-timeout", "5m0s"
+    ]
+    ports:
+      - "4444:4444"
+
+  selenoid-ui:
+    container_name: selenoid-ui
+    network_mode: bridge
+    image: "aerokube/selenoid-ui:latest-release"
+    depends_on:
+      - selenoid
+    links:
+      - selenoid
+    command: [
+      "--listen", ":9090", "--selenoid-uri", "http://selenoid:4444"
+    ]
+    ports:
+      - "9090:9090"
+
+  qapropeller:
+    container_name: qapropeller
+    image: "qapropeller/qa-battle:latest"
+    ports:
+      - "8081:8080"
