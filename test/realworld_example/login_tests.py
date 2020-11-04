@@ -39,8 +39,8 @@ password = "test.12345678"
 """)
 @pytest.mark.flaky(reruns=2, reruns_delay=2)
 @pytest.mark.only_browser("chromium")
-def test_should_login_to_system(logout_fixture):
-    page: Page = logout_fixture
+def test_should_login_to_system(p):
+    page: Page = p
     login_page = LoginPage(base_url, page)
     main_page = login_page.open().login("%s@gmail.com" % username, password)
     assert main_page.account_button(username).innerText() == username
@@ -52,8 +52,8 @@ def test_should_login_to_system(logout_fixture):
 @allure.story("Login Flow")
 @allure.title("Login With Invalid Credentials")
 @pytest.mark.only_browser("chromium")
-def test_should_not_login_with_invalid_credentials(logout_fixture):
-    page: Page = logout_fixture
+def test_should_not_login_with_invalid_credentials(p):
+    page: Page = p
     login_page = LoginPage(base_url, page)
     login_page.open().login("%s@gmail.comm" % username, password)
     assert login_page.error_message().innerText() == "email or password is invalid"
@@ -67,8 +67,8 @@ def test_should_not_login_with_invalid_credentials(logout_fixture):
 @allure.story("Logout")
 @allure.title("Logout from System")
 @pytest.mark.only_browser("chromium")
-def test_should_logout_from_system(logout_fixture):
-    page: Page = logout_fixture
+def test_should_logout_from_system(p):
+    page: Page = p
     login_page = LoginPage(base_url, page)
     main_page = login_page.open() \
         .login("%s@gmail.com" % username, password) \
