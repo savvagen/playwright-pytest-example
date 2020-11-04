@@ -1,9 +1,16 @@
-import pytest, allure, time, os, pathlib
+import nest_asyncio
+nest_asyncio.apply()
+
+import pytest
+import allure
+import time
+import os
+import pathlib
+from faker import Faker
 from playwright.sync_api import Page, Request, Browser, BrowserContext, Video
 from pages.realworld_example.login_page.login_page import LoginPage
 from pages.realworld_example.main_page.main_page import MainPage
 from pages.realworld_example.settings_page.settings_page import SettingsPage
-from faker import Faker
 
 fake = Faker(['en_US'])
 base_url = "https://react-redux.realworld.io"
