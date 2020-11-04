@@ -21,7 +21,7 @@ jobs:
         run: |
           pipenv install --dev
           cd test/realworld_example
-          pipenv run pytest login_tests.py article_tests.py registration_tests.py --alluredir=./allure-results -n 1
+          pipenv run pytest login_tests.py --alluredir=./allure-results -n 1
           pipenv run allure generate
 
       #- name: Install Requirements
@@ -29,7 +29,7 @@ jobs:
       #- name: Run Tests
       #  run: |
       #    cd test/realworld_example
-      #    pytest login_tests.py --alluredir=./allure-results
+      #    pipenv run pytest login_tests.py article_tests.py registration_tests.py --alluredir=./allure-results -n 1
       #    allure generate
 
       - uses: actions/upload-artifact@v2
