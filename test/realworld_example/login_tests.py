@@ -1,7 +1,3 @@
-# https://github.com/microsoft/playwright-python/issues/178
-import nest_asyncio
-nest_asyncio.apply()
-
 import pytest, allure, time, os, pathlib
 from faker import Faker
 from playwright.sync_api import Page, Request, Browser, BrowserContext, Video
@@ -44,12 +40,12 @@ def logout_fixture(browser: Browser, request):
 @pytest.mark.flaky(reruns=2, reruns_delay=2)
 @pytest.mark.only_browser("chromium")
 def test_should_login_to_system(logout_fixture):
-    p: Page = logout_fixture
-    login_page = LoginPage(base_url, p)
+    page: Page = logout_fixture
+    login_page = LoginPage(base_url, page)
     main_page = login_page.open().login("%s@gmail.com" % username, password)
     assert main_page.account_button(username).innerText() == username
-    assert "%s/#/" % base_url in p.url
-    # p.screenshot(path='screenshots/logged_in.png')
+    assert "%s/#/" % base_url in page.url
+    # page.screenshot(path='screenshots/logged_in.png')
 
 
 @allure.feature("Login")
@@ -57,14 +53,14 @@ def test_should_login_to_system(logout_fixture):
 @allure.title("Login With Invalid Credentials")
 @pytest.mark.only_browser("chromium")
 def test_should_not_login_with_invalid_credentials(logout_fixture):
-    p: Page = logout_fixture
-    login_page = LoginPage(base_url, p)
+    page: Page = logout_fixture
+    login_page = LoginPage(base_url, page)
     login_page.open().login("%s@gmail.comm" % username, password)
     assert login_page.error_message().innerText() == "email or password is invalid"
     assert login_page.email_filed().value() == "%s@gmail.comm" % username
     assert login_page.submit_button().isEnabled()
-    assert "%s/#/login" % base_url in p.url
-    # p.screenshot(path='screenshots/invalid_login.png')
+    assert "%s/#/login" % base_url in page.url
+    # page.screenshot(path='screenshots/invalid_login.png')
 
 
 @allure.feature("Login")
@@ -72,15 +68,15 @@ def test_should_not_login_with_invalid_credentials(logout_fixture):
 @allure.title("Logout from System")
 @pytest.mark.only_browser("chromium")
 def test_should_logout_from_system(logout_fixture):
-    p: Page = logout_fixture
-    login_page = LoginPage(base_url, p)
+    page: Page = logout_fixture
+    login_page = LoginPage(base_url, page)
     main_page = login_page.open() \
         .login("%s@gmail.com" % username, password) \
         .open_settings() \
         .logout()
     assert main_page.login_button().innerText() == "Sign in"
     assert main_page.register_button().innerText() == "Sign up"
-    # p.screenshot(path='screenshots/logged_out.png')
+    # page.screenshot(path='screenshots/logged_out.png')
 
 
 
