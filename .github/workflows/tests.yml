@@ -14,12 +14,15 @@ jobs:
       - name: Set Up Python 3.7
         uses: actions/setup-python@v2
         with:
-          python-version: 3.9
+          python-version: 3.7.9
       - name: Install pipenv
         uses: dschep/install-pipenv-action@v1
       - name: Run Tests
         run: |
+          pip install 'tornado<5' 'notebook<5.7.9'
+          pipenv install 'tornado<5' 'notebook<5.7.9'
           pipenv install --dev
+          pipenv install 'tornado<5' 'notebook<5.7.9'
           cd test/realworld_example
           pipenv run pytest login_tests.py --alluredir=./allure-results -n 1
           pipenv run allure generate
