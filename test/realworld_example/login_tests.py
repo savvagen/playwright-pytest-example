@@ -1,8 +1,6 @@
 # https://github.com/microsoft/playwright-python/issues/178
 # import nest_asyncio
 # nest_asyncio.apply()
-import asyncio
-print(asyncio.run(asyncio.sleep(0)))
 
 import pytest, allure, time, os, pathlib
 from faker import Faker
