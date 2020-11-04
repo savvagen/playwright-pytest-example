@@ -14,7 +14,6 @@ faker = "*"
 PyHamcrest = "*"
 allure-pytest = "*"
 pytest-rerunfailures = "*"
-tornado= "4.5.3"
 nest_asyncio = "*"
 
 [requires]
