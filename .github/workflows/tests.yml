@@ -1,3 +1,5 @@
+name: Playwright Tests Example
+
 on:
   push:
     branches:
