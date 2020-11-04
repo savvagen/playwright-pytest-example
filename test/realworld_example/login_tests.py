@@ -39,44 +39,44 @@ password = "test.12345678"
 """)
 @pytest.mark.flaky(reruns=2, reruns_delay=2)
 @pytest.mark.only_browser("chromium")
-def test_should_login_to_system(p):
-    page: Page = p
+def test_should_login_to_system(page: Page):
+    p: Page = page
     login_page = LoginPage(base_url, page)
     main_page = login_page.open().login("%s@gmail.com" % username, password)
     assert main_page.account_button(username).innerText() == username
-    assert "%s/#/" % base_url in page.url
-    page.screenshot(path='screenshots/logged_in.png')
+    assert "%s/#/" % base_url in p.url
+    p.screenshot(path='screenshots/logged_in.png')
 
 
 @allure.feature("Login")
 @allure.story("Login Flow")
 @allure.title("Login With Invalid Credentials")
 @pytest.mark.only_browser("chromium")
-def test_should_not_login_with_invalid_credentials(p):
-    page: Page = p
-    login_page = LoginPage(base_url, page)
+def test_should_not_login_with_invalid_credentials(page: Page):
+    p: Page = page
+    login_page = LoginPage(base_url, p)
     login_page.open().login("%s@gmail.comm" % username, password)
     assert login_page.error_message().innerText() == "email or password is invalid"
     assert login_page.email_filed().value() == "%s@gmail.comm" % username
     assert login_page.submit_button().isEnabled()
-    assert "%s/#/login" % base_url in page.url
-    page.screenshot(path='screenshots/invalid_login.png')
+    assert "%s/#/login" % base_url in p.url
+    p.screenshot(path='screenshots/invalid_login.png')
 
 
 @allure.feature("Login")
 @allure.story("Logout")
 @allure.title("Logout from System")
 @pytest.mark.only_browser("chromium")
-def test_should_logout_from_system(p):
-    page: Page = p
-    login_page = LoginPage(base_url, page)
+def test_should_logout_from_system(page: Page):
+    p: Page = page
+    login_page = LoginPage(base_url, p)
     main_page = login_page.open() \
         .login("%s@gmail.com" % username, password) \
         .open_settings() \
         .logout()
     assert main_page.login_button().innerText() == "Sign in"
     assert main_page.register_button().innerText() == "Sign up"
-    page.screenshot(path='screenshots/logged_out.png')
+    p.screenshot(path='screenshots/logged_out.png')
 
 
 
