@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest # or macos-latest, windows-latest
     steps:
       - uses: actions/checkout@v2
-      #- uses: microsoft/playwright-github-action@v1
+      - uses: microsoft/playwright-github-action@v1
       - name: Set up Python 3.7
         uses: actions/setup-python@v2
         with:
@@ -21,7 +21,7 @@ jobs:
         run: |
           pipenv install --dev
           pipenv install 'tornado<5' 'notebook<5.7.9'
-          pipenv run pytest test/realworld_example/login_tests.py test/realworld_example/article_tests.py test/realworld_example/registration_tests.py --alluredir=./allure-results -n 1
+          pipenv run pytest test/realworld_example/login_tests.py --alluredir=./allure-results
           pipenv run allure generate
 
 #      - name: Install dependencies and run tests
