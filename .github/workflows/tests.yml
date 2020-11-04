@@ -1,4 +1,4 @@
-name: Playwright Tests Example
+name: Playwright E2E Tests
 
 on:
   push:
@@ -7,19 +7,18 @@ on:
 
 jobs:
   e2e-tests:
-    runs-on: ubuntu-latest # ubuntu-latest or macos-latest, windows-latest
+    runs-on: macos-latest # ubuntu-latest or macos-latest, windows-latest
     steps:
       - uses: actions/checkout@v2
       - uses: microsoft/playwright-github-action@v1
       - name: Set Up Python 3.7
         uses: actions/setup-python@v2
         with:
-          python-version: 3.7.9
+          python-version: 3.7.7
       - name: Install pipenv
         uses: dschep/install-pipenv-action@v1
       - name: Run Tests
         run: |
-          pip3 install tornado==4.5.3
           pipenv install --dev
           cd test/realworld_example
           pipenv run pytest login_tests.py --alluredir=./allure-results -n 1
