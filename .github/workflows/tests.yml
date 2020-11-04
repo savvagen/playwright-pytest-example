@@ -14,21 +14,24 @@ jobs:
       - name: Set up Python 3.7
         uses: actions/setup-python@v2
         with:
-          python-version: 3.7.7
-#      - name: Install pipenv
-#        uses: dschep/install-pipenv-action@v1
-#      - name: Run tests
-#        run: |
-#          pipenv install --dev
-#          pipenv run pytest test/realworld_example/login_tests.py --alluredir=./allure-results
-#          pipenv run allure generate
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-      - name: Run Tests
+          python-version: 3.7.9
+
+      - name: Install pipenv
+        uses: dschep/install-pipenv-action@v1
+      - name: Run tests
         run: |
+          pipenv install --dev
           cd test/realworld_example
-          pytest login_tests.py --alluredir=./allure-results
-          allure generate
+          pipenv run pytest login_tests.py article_tests.py registration_tests.py --alluredir=./allure-results -n 1
+          pipenv run allure generate
+
+      #- name: Install dependencies
+      #  run: pip install -r requirements.txt
+      #- name: Run Tests
+      #  run: |
+      #    cd test/realworld_example
+      #    pytest login_tests.py --alluredir=./allure-results
+      #    allure generate
 
       - uses: actions/upload-artifact@v2
         with:
