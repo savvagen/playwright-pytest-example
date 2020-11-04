@@ -11,27 +11,25 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: microsoft/playwright-github-action@v1
-      - uses: actions/setup-python@v2
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v2
         with:
-          python-version: '3.7.7'
-      - uses: dschep/install-pipenv-action@v1
-
-      - name: Install dependencies and run tests
+          python-version: 3.7
+      - name: Install pipenv
+        uses: dschep/install-pipenv-action@v1
+      - name: Run tests
         run: |
-          python -m pip install --upgrade pip
-          pip install pipenv
           pipenv install --dev
-          pytest test/realworld_example/login_tests.py test/realworld_example/article_tests.py test/realworld_example/registration_tests.py --headful --alluredir=./allure-results -n 1
-          allure generate
+          pipenv run pytest test/realworld_example/login_tests.py test/realworld_example/article_tests.py test/realworld_example/registration_tests.py --headful --alluredir=./allure-results -n 1
+          pipenv run allure generate
 
-#      - name: Test with pytest
+#      - name: Install dependencies and run tests
 #        run: |
-#          pip install pytest
-#          pytest test/realworld_example/login_tests.py \
-#            test/realworld_example/article_tests.py \
-#            test/realworld_example/registration_tests.py \
-#            --headful --alluredir=./allure-results -n 1
-#      - run: allure generate allure-results --clean -o
+#          python -m pip install --upgrade pip
+#          pip install pipenv
+#          pipenv install --dev
+#          pytest test/realworld_example/login_tests.py test/realworld_example/article_tests.py test/realworld_example/registration_tests.py --headful --alluredir=./allure-results -n 1
+#          allure generate
 
       - uses: actions/upload-artifact@v2
         with:
