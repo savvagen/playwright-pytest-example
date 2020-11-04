@@ -1,5 +1,6 @@
 playwright==0.151.1
 pytest-playwright==0.0.7
+pytest==6.1.2
 requests
 pytest-xdist
 faker
