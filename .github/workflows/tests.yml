@@ -10,22 +10,21 @@ jobs:
     runs-on: ubuntu-latest # ubuntu-latest or macos-latest, windows-latest
     steps:
       - uses: actions/checkout@v2
-      #- uses: microsoft/playwright-github-action@v1
-      - name: Set up Python 3.7
+      - uses: microsoft/playwright-github-action@v1
+      - name: Set Up Python 3.7
         uses: actions/setup-python@v2
         with:
           python-version: 3.7.9
-
       - name: Install pipenv
-        uses: dschep/install-pipenv-action@v1
-      - name: Run tests
+        uses: dschep/install-pipenv-action@v2
+      - name: Run Tests
         run: |
           pipenv install --dev
           cd test/realworld_example
           pipenv run pytest login_tests.py article_tests.py registration_tests.py --alluredir=./allure-results -n 1
           pipenv run allure generate
 
-      #- name: Install dependencies
+      #- name: Install Requirements
       #  run: pip install -r requirements.txt
       #- name: Run Tests
       #  run: |
