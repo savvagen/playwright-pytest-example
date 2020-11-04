@@ -20,7 +20,7 @@ jobs:
       - name: Run tests
         run: |
           pipenv install --dev
-          pipenv run pytest test/realworld_example/login_tests.py test/realworld_example/article_tests.py test/realworld_example/registration_tests.py --headless --alluredir=./allure-results -n 1
+          pipenv run pytest test/realworld_example/login_tests.py test/realworld_example/article_tests.py test/realworld_example/registration_tests.py --alluredir=./allure-results
           pipenv run allure generate
 
 #      - name: Install dependencies and run tests
