@@ -8,7 +8,7 @@ from faker import Faker
 fake = Faker(['en_US'])
 base_url = "https://react-redux.realworld.io"
 username = 'savva.genchevskiy'
-password = "S.gench19021992"
+password = "test.12345678"
 
 
 # yield_fixture(scope="session") #### To run all test in one browser (Fixture is running ones per session)

@@ -9,7 +9,7 @@ from pages.realworld_example.settings_page.settings_page import SettingsPage
 
 base_url = "https://react-redux.realworld.io"
 username = "savva.genchevskiy"
-password = "S.gench19021992"
+password = "test.12345678"
 
 article = {
     'title': 'Python Playwright Demo',
