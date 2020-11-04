@@ -1,11 +1,10 @@
-import nest_asyncio
-nest_asyncio.apply()
+# https://github.com/microsoft/playwright-python/issues/178
+import asyncio
+#import nest_asyncio
+#nest_asyncio.apply()
+print(asyncio.run(asyncio.sleep(0)))
 
-import pytest
-import allure
-import time
-import os
-import pathlib
+import pytest, allure, time, os, pathlib
 from faker import Faker
 from playwright.sync_api import Page, Request, Browser, BrowserContext, Video
 from pages.realworld_example.login_page.login_page import LoginPage
