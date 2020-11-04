@@ -14,6 +14,7 @@ faker = "*"
 PyHamcrest = "*"
 allure-pytest = "*"
 pytest-rerunfailures = "*"
+nest_asyncio = "*"
 
 [requires]
 python_version = "3.7"
