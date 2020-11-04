@@ -6,8 +6,8 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-playwright = "0.151.1"
-pytest-playwright = "0.0.7"
+playwright = "0.152.0"
+pytest-playwright = "*"
 requests = "*"
 pytest-xdist = "*"
 faker = "*"

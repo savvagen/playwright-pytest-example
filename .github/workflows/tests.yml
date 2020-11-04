@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: 3.7.9
       - name: Install pipenv
-        uses: dschep/install-pipenv-action@v2
+        uses: dschep/install-pipenv-action@v1
       - name: Run Tests
         run: |
           pipenv install --dev
