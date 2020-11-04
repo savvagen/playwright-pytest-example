@@ -18,5 +18,5 @@ class SettingsPage(WebPage):
 
     def logout(self):
         self.logout_button().scrollIntoView().click()
-        self.page.waitForSelector(self.header.sign_in_button().selector)
+        self.page.waitForSelector('a[href="#login"]')
         return MainPage(self.base_url, self.page)
