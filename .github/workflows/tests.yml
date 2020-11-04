@@ -7,7 +7,7 @@ on:
 
 jobs:
   e2e-tests:
-    runs-on: ubuntu-latest # ubuntu-latest or macos-latest, windows-latest
+    runs-on: ubuntu-16.04 # ubuntu-latest or macos-latest, windows-latest
     steps:
       - uses: actions/checkout@v2
       - uses: microsoft/playwright-github-action@v1
