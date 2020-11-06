@@ -21,6 +21,10 @@ jobs:
           sudo apt-get update 
           sudo apt-get install allure
 
+      - name: Verify allure
+        run: |
+          allure --version
+
       - name: Run Tests
         run: |
           pipenv install --dev
