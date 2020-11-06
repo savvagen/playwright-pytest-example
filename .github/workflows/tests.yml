@@ -1,9 +1,6 @@
 name: Playwright E2E Tests
 
-on:
-  push:
-    branches:
-    - *
+on: push
 
 jobs:
   e2e-tests:
