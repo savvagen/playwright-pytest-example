@@ -1,6 +1,6 @@
 name: Playwright E2E Tests
 
-on: push
+on: [push, pull_request]
 
 jobs:
   e2e-tests:
@@ -17,9 +17,11 @@ jobs:
 
       - name: Install allure
         run: |
-          sudo apt-add-repository ppa:qameta/allure
-          sudo apt-get update 
-          sudo apt-get install allure
+          wget --no-verbose -O /tmp/allure-2.13.2.zip https://dl.bintray.com/qameta/maven/io/qameta/allure/allure-commandline/2.13.2/allure-commandline-2.13.2.zip
+          unzip /tmp/allure-2.13.2.zip -d /
+          rm -rf /tmp/*
+          chmod -R +x /allure-2.13.2/bin
+          export PATH=$PATH:/allure-2.13.2/bin
 
       - name: Verify allure
         run: |
