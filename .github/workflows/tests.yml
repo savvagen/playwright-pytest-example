@@ -18,10 +18,10 @@ jobs:
       - name: Install allure
         run: |
           wget --no-verbose -O /tmp/allure-2.13.2.zip https://dl.bintray.com/qameta/maven/io/qameta/allure/allure-commandline/2.13.2/allure-commandline-2.13.2.zip
-          unzip /tmp/allure-2.13.2.zip -d /
+          unzip /tmp/allure-2.13.2.zip -d ./
           rm -rf /tmp/*
-          chmod -R +x /allure-2.13.2/bin
-          export PATH=$PATH:/allure-2.13.2/bin
+          chmod -R +x ./allure-2.13.2/bin
+          export PATH=$PATH:./allure-2.13.2/bin
 
       - name: Verify allure
         run: |
