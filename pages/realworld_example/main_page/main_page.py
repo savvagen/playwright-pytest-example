@@ -1,6 +1,5 @@
 from elements.playwright_element import *
 from pages.web_page import WebPage
-from pages.realworld_example.main_page.articles import *
 import allure
 
 

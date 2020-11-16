@@ -9,13 +9,10 @@ els = lambda page, css: PlaywrightElements(page, css)
 
 class PlaywrightElement:
 
-    def __init__(self, page: Page, css, el: ElementHandle = None):
+    def __init__(self, page: Page, css):
         self.page = page
         self.selector = css
-        if el:
-            self.element_handle = el
-        else:
-            self.element_handle: ElementHandle = self.page.querySelector(css)
+        self.element_handle: ElementHandle = self.page.querySelector(css)
 
     def setValue(self, text):
         self.element_handle.fill(text)
@@ -35,8 +32,7 @@ class PlaywrightElement:
         return self
 
     def shouldBeVisible(self):
-        # self.page.waitForSelector(self.selector, state="visible")
-        self.element_handle.waitForElementState(state="visible")
+        self.page.waitForSelector(self.selector, state="visible")
         return self
 
     def isEnabled(self):
