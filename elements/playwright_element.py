@@ -4,7 +4,6 @@ s: ElementHandle = lambda page, css: page.querySelector(css)
 ss: ElementHandle = lambda page, css: page.querySelectorAll(css)
 
 el = lambda page, css: PlaywrightElement(page, css)
-xel = lambda page, css, el: PlaywrightElement(page, css=css, el=el)
 els = lambda page, css: PlaywrightElements(page, css)
 
 
@@ -27,8 +26,7 @@ class PlaywrightElement:
         return self
 
     def sendKeys(self, text, delay=10):
-        self.element_handle.waitForElementState(state="visible")
-        self.element_handle.type(text, delay=delay)
+        self.element_handle.waitForElementState(state="visible").type(text, delay=delay)
         return self
 
     def click(self):
@@ -57,8 +55,7 @@ class PlaywrightElement:
         return self
 
     def innerText(self):
-        self.element_handle.waitForElementState(state="visible")
-        return self.element_handle.innerText()
+        return self.page.waitForSelector(self.selector, state="visible").innerText()
 
     def scrollIntoView(self):
         self.page.evalOnSelector(self.selector,

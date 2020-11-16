@@ -11,7 +11,6 @@ class MainPage(WebPage):
     def editor_link(self): return el(self.page, 'a[href="#editor"]')
     def login_button(self): return el(self.page, 'a[href="#login"]')
     def register_button(self): return el(self.page, 'text="Sign up"')
-    def articles(self): return Articles(self.page, ".article-preview")
 
     def __init__(self, base_url, page: Page):
         super().__init__(page)
