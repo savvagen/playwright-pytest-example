@@ -4,14 +4,19 @@ s: ElementHandle = lambda page, css: page.querySelector(css)
 ss: ElementHandle = lambda page, css: page.querySelectorAll(css)
 
 el = lambda page, css: PlaywrightElement(page, css)
+xel = lambda page, css, el: PlaywrightElement(page, css=css, el=el)
+els = lambda page, css: PlaywrightElements(page, css)
 
 
 class PlaywrightElement:
 
-    def __init__(self, page: Page, css):
+    def __init__(self, page: Page, css, el: ElementHandle = None):
         self.page = page
         self.selector = css
-        self.element_handle: ElementHandle = self.page.querySelector(css)
+        if el:
+            self.element_handle = el
+        else:
+            self.element_handle: ElementHandle = self.page.querySelector(css)
 
     def setValue(self, text):
         self.element_handle.fill(text)
@@ -21,8 +26,8 @@ class PlaywrightElement:
         self.element_handle.fill(text)
         return self
 
-    def sendKeys(self, text, delay=0):
-        self.page.waitForSelector(self.selector, state="visible")
+    def sendKeys(self, text, delay=10):
+        self.element_handle.waitForElementState(state="visible")
         self.element_handle.type(text, delay=delay)
         return self
 
@@ -32,7 +37,8 @@ class PlaywrightElement:
         return self
 
     def shouldBeVisible(self):
-        self.page.waitForSelector(self.selector, state="visible")
+        # self.page.waitForSelector(self.selector, state="visible")
+        self.element_handle.waitForElementState(state="visible")
         return self
 
     def isEnabled(self):
@@ -51,10 +57,12 @@ class PlaywrightElement:
         return self
 
     def innerText(self):
-        return self.page.waitForSelector(self.selector, state="visible").innerText()
+        self.element_handle.waitForElementState(state="visible")
+        return self.element_handle.innerText()
 
     def scrollIntoView(self):
-        self.page.evalOnSelector(self.selector, '''(el) => { el.scrollIntoView({behavior: \"auto\", block: \"center\", inline: \"nearest\"}); }''')
+        self.page.evalOnSelector(self.selector,
+                                 '''(el) => { el.scrollIntoView({behavior: \"auto\", block: \"center\", inline: \"nearest\"}); }''')
         return self
 
 
@@ -67,3 +75,16 @@ class PlaywrightElements:
 
     def size(self):
         len(self.elements)
+
+    def get(self, index):
+        return self.elements[index]
+
+    def get_texts(self):
+        texts = self.page.evalOnSelectorAll(self.selector, '''
+                (elems, min) => {
+                    return elems.map(function(el) {
+                        return el.textContent    //.toUpperCase()
+                    });     //.join(", ");
+                }''')
+        return texts
+

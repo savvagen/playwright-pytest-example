@@ -4,10 +4,8 @@ from pages.realworld_example.login_page.login_page import LoginPage
 from models.user import User
 from pages.realworld_example.main_page.main_page import MainPage
 import time
+from test.realworld_example.test_base import *
 
-base_url = "https://react-redux.realworld.io"
-username = 'savva.genchevskiy'
-password = "S.gench19021992"
 
 with sync_playwright() as p:
     browser = p.chromium.launch(headless=False)

@@ -1,6 +1,8 @@
 from elements.playwright_element import *
 from pages.web_page import WebPage
+from pages.realworld_example.main_page.articles import *
 import allure
+
 
 class MainPage(WebPage):
 
@@ -9,6 +11,7 @@ class MainPage(WebPage):
     def editor_link(self): return el(self.page, 'a[href="#editor"]')
     def login_button(self): return el(self.page, 'a[href="#login"]')
     def register_button(self): return el(self.page, 'text="Sign up"')
+    def articles(self): return Articles(self.page, ".article-preview")
 
     def __init__(self, base_url, page: Page):
         super().__init__(page)
@@ -31,7 +34,6 @@ class MainPage(WebPage):
         self.register_button().click()
         from pages.realworld_example.registration_page.registration_page import RegistrationPage
         return RegistrationPage(self.base_url, self.page)
-
 
     @allure.step("Press Settings link")
     def open_settings(self):
