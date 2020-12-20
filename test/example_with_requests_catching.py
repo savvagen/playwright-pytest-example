@@ -1,10 +1,9 @@
 from playwright import sync_playwright
-from playwright.sync_api import Request, Route, Response, Page
-from pages.realworld_example.login_page.login_page import LoginPage
+from playwright.sync_api import Request
+from pages.login_page.login_page import LoginPage
 from models.user import User
-from pages.realworld_example.main_page.main_page import MainPage
-import time
-from test.realworld_example.test_base import *
+from pages.main_page.main_page import MainPage
+from test.test_base import *
 
 
 with sync_playwright() as p:

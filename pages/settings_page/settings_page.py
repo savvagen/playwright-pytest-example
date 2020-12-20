@@ -1,5 +1,5 @@
 from pages.web_page import WebPage
-from pages.realworld_example.main_page.main_page import MainPage
+from pages.main_page.main_page import MainPage
 from elements.playwright_element import *
 
 

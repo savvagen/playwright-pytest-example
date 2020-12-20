@@ -1,11 +1,8 @@
 from playwright.sync_api import Page
-import pytest, requests, time, allure
-from pages.realworld_example.editor_page.editor_page import EditorPage
-from pages.realworld_example.article_page.article_page import ArticlePage
-from pages.realworld_example.login_page.login_page import LoginPage
-from pages.realworld_example.main_page.main_page import MainPage
-from pages.realworld_example.settings_page.settings_page import SettingsPage
-from test.realworld_example.test_base import *
+import pytest, requests, allure
+from pages.editor_page.editor_page import EditorPage
+from pages.main_page.main_page import MainPage
+from test.test_base import *
 
 article = {
     'title': 'Python Playwright Demo',

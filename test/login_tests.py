@@ -1,9 +1,7 @@
-import pytest, allure, time, os, pathlib
-from playwright.sync_api import Page, Request, Browser, BrowserContext, Video
-from pages.realworld_example.login_page.login_page import LoginPage
-from pages.realworld_example.main_page.main_page import MainPage
-from pages.realworld_example.settings_page.settings_page import SettingsPage
-from test.realworld_example.test_base import *
+import pytest, allure
+from playwright.sync_api import Page, Browser
+from pages.login_page.login_page import LoginPage
+from test.test_base import *
 
 
 # yield_fixture(scope="session") #### To run all test in one browser (Fixture is running ones per session)

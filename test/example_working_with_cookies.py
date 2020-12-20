@@ -1,9 +1,8 @@
 import requests
 from playwright import sync_playwright
-from pages.realworld_example.main_page.main_page import MainPage
-from pages.realworld_example.login_page.login_page import LoginPage
+from pages.main_page.main_page import MainPage
 import time
-from test.realworld_example.test_base import *
+from test.test_base import *
 
 with sync_playwright() as p:
 
@@ -27,12 +26,14 @@ with sync_playwright() as p:
 
     # 3. Open Web Page
     main_page = MainPage(base_url, page).open()
+
     # 4. Set Cookies and put JWT token to Local Storage
     page.evaluate("(t) => { localStorage.setItem('jwt', `${t}`) }", arg=resp.json()['user']['token'])
     page.context.addCookies([cookie])
     st = page.evaluate('''()=> { return localStorage.getItem('jwt')} ''')
     print("Local Storage JWT")
     print(st)
+
     # 5. Enjoy!!! Reload Page as Logged In User
     main_page.page.reload()
     time.sleep(5)

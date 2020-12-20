@@ -1,14 +1,9 @@
 import allure
 import pytest
-from playwright.sync_api import Page, Request, Browser
+from playwright.sync_api import Page, Browser
 from models.user import User
-from pages.realworld_example.registration_page.registration_page import RegistrationPage
-
-from faker import Faker
-
-fake = Faker(['en_US'])
-base_url = "https://react-redux.realworld.io"
-username = "savva.genchevskiy"
+from pages.registration_page.registration_page import RegistrationPage
+from test.test_base import *
 
 
 @pytest.yield_fixture(scope="function")

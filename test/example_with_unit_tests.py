@@ -1,6 +1,6 @@
 from unittest import TestCase
 from playwright import sync_playwright
-from test.realworld_example.test_base import *
+from test.test_base import *
 
 
 
