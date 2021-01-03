@@ -1,0 +1,65 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "fv-az139-604",
+    "children" : [ {
+      "name" : "9672-MainThread",
+      "children" : [ {
+        "name" : "Login With Invalid Credentials",
+        "uid" : "ad4df68947f0ad78",
+        "parentUid" : "dc222f9dac3c892619b0db981fd92cac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609708232181,
+          "stop" : 1609708233056,
+          "duration" : 875
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'" ]
+      }, {
+        "name" : "Login With Valid Credentials",
+        "uid" : "9b80066598a4371c",
+        "parentUid" : "dc222f9dac3c892619b0db981fd92cac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609708230884,
+          "stop" : 1609708232029,
+          "duration" : 1145
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'" ]
+      }, {
+        "name" : "test_should_login[chromium]",
+        "uid" : "dace7ee983403e69",
+        "parentUid" : "dc222f9dac3c892619b0db981fd92cac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609708234431,
+          "stop" : 1609708235478,
+          "duration" : 1047
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'" ]
+      }, {
+        "name" : "Logout from System",
+        "uid" : "bd50b26f9e2f18c",
+        "parentUid" : "dc222f9dac3c892619b0db981fd92cac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609708233203,
+          "stop" : 1609708234294,
+          "duration" : 1091
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'" ]
+      } ],
+      "uid" : "dc222f9dac3c892619b0db981fd92cac"
+    } ],
+    "uid" : "3925fa6840b818dc74938f090342834e"
+  } ],
+  "name" : "timeline"
+}
