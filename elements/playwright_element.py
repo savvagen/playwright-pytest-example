@@ -3,12 +3,12 @@ from playwright.sync_api import Page, ElementHandle
 s: ElementHandle = lambda page, css: page.querySelector(css)
 ss: ElementHandle = lambda page, css: page.querySelectorAll(css)
 
-el = lambda page, css: PlaywrightElement(page, css)
-elh = lambda page, el: PlaywrightElementHandle(page, el)
-els = lambda page, css: PlaywrightElements(page, css)
+el = lambda page, css: WebElement(page, css)
+elh = lambda page, el: WebElementHandle(page, el)
+els = lambda page, css: WebElements(page, css)
 
 
-class PlaywrightElement:
+class WebElement:
 
     def __init__(self, page: Page, css):
         self.page = page
@@ -60,7 +60,7 @@ class PlaywrightElement:
         return self
 
 
-class PlaywrightElementHandle:
+class WebElementHandle:
 
     def __init__(self, page: Page, element_handle: ElementHandle):
         self.page = page
@@ -112,7 +112,7 @@ class PlaywrightElementHandle:
 
 
 
-class PlaywrightElements:
+class WebElements:
 
     def __init__(self, page: Page, css):
         self.page = page

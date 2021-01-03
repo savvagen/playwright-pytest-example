@@ -1,6 +1,5 @@
 import allure
 from pages.web_page import WebPage
-from playwright.sync_api import Page
 from elements.playwright_element import *
 
 

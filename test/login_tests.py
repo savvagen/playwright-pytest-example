@@ -6,7 +6,7 @@ from test.test_base import *
 
 # yield_fixture(scope="session") #### To run all test in one browser (Fixture is running ones per session)
 # yield_fixture(scope="function") #### To run all test in separated browsers (Fixture Is Running for every test)
-@pytest.yield_fixture(scope="function")
+@pytest.fixture(scope="function")
 def logout_fixture(browser: Browser, request):
     p: Page = browser.newPage()  # browser.newPage(videosPath="video/")
     p.context.clearCookies()
