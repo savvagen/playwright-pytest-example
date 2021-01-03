@@ -20,8 +20,7 @@ jobs:
       - name: Run Tests
         run: |
           pipenv install --dev
-          cd test/realworld_example
-          pipenv run pytest login_tests.py --alluredir=./allure-results
+          pipenv run pytest test/login_tests.py --alluredir=./allure-results
           pipenv run allure generate
 
       #- name: Install Requirements
