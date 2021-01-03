@@ -1,0 +1,121 @@
+[ {
+  "uid" : "aefff45956045b16",
+  "name" : "Publish Article Flow from MainPage",
+  "time" : {
+    "start" : 1609711043027,
+    "stop" : 1609711044498,
+    "duration" : 1471
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "adf9376085bdec59",
+  "name" : "test_should_create_post[chromium]",
+  "time" : {
+    "start" : 1609711047859,
+    "stop" : 1609711048986,
+    "duration" : 1127
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6e888f3136a1a1c5",
+  "name" : "Login With Invalid Credentials",
+  "time" : {
+    "start" : 1609711033791,
+    "stop" : 1609711034596,
+    "duration" : 805
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "433c94249cbac297",
+  "name" : "Register With Invalid Creds",
+  "time" : {
+    "start" : 1609711049184,
+    "stop" : 1609711050044,
+    "duration" : 860
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "11fb5fc4237880c8",
+  "name" : "Register With Existing Profile",
+  "time" : {
+    "start" : 1609711039845,
+    "stop" : 1609711040787,
+    "duration" : 942
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "58b6f2cec20602bf",
+  "name" : "Register With Invalid Creds",
+  "time" : {
+    "start" : 1609711050188,
+    "stop" : 1609711051130,
+    "duration" : 942
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "31ac31034c999497",
+  "name" : "Publish Article Flow from ArticlePage",
+  "time" : {
+    "start" : 1609711045586,
+    "stop" : 1609711046611,
+    "duration" : 1025
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ebe30eadec31af49",
+  "name" : "Register With new User",
+  "time" : {
+    "start" : 1609711038704,
+    "stop" : 1609711039707,
+    "duration" : 1003
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "98046c7c07ca34c3",
+  "name" : "Logout from System",
+  "time" : {
+    "start" : 1609711035458,
+    "stop" : 1609711036482,
+    "duration" : 1024
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1a8d95e5eb0443f4",
+  "name" : "Register With Invalid Creds",
+  "time" : {
+    "start" : 1609711040939,
+    "stop" : 1609711041847,
+    "duration" : 908
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f2505e156e81181e",
+  "name" : "Login With Valid Credentials",
+  "time" : {
+    "start" : 1609711031673,
+    "stop" : 1609711032754,
+    "duration" : 1081
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "29646c80fcf55caf",
+  "name" : "test_should_login[chromium]",
+  "time" : {
+    "start" : 1609711037715,
+    "stop" : 1609711038655,
+    "duration" : 940
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
