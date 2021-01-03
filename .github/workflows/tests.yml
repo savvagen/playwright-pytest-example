@@ -1,4 +1,4 @@
-name: Playwright E2E Tests
+name: Playwright Pytest Example
 
 on:
   push:
@@ -7,11 +7,6 @@ on:
 
 jobs:
   e2e-tests:
-#    runs-on: python-3.6-alpine
-#    steps:
-#      - name: Install Requirements
-#        run: apk add --update nodejs npm openjdk8 && npm install -g allure-commandline
-
     runs-on: ubuntu-latest # ubuntu-latest or macos-latest, windows-latest
     steps:
       - uses: actions/checkout@v2
