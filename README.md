@@ -1,21 +1,31 @@
+# Playwright Pytest Example Project
 
-# Running Tests
+![Build Status](https://github.com/savvagen/playwright-pytest-example/workflows/Playwright%20Pytest%20Example/badge.svg)
+![Free](https://img.shields.io/badge/free-open--source-green.svg)
+
+##  Last Published results:
+<a href="https://savvagen.github.io/playwright-pytest-example"> 
+    <img src="https://avatars3.githubusercontent.com/u/5879127?s=200&v=4" width="50" height="50">
+    <p>Allure Report on Github Pages
+</a>
+
+## Running Tests
 
 Go to test directory: `test/realworld_example`
 
-### Run Tests in 1 thread
+#### Run Tests in 1 thread
 ``` 
 pytest login_tests.py --headful
 ```
 
-### Run Tests in parallel
+#### Run Tests in parallel
 ```
 pipenv install pytest-xdist
 cd test/realworld_example
 pytest login_tests.py registration_tests.py article_tests.py --headful -n 3
 ```
 
-### Run With Allure Report in parallel
+#### Run With Allure Report in parallel
 ``` 
 cd test/realworld_example
 pytest login_tests.py article_tests.py registration_tests.py --headful --alluredir=./allure-results -n 3

@@ -1,6 +1,6 @@
 from elements.playwright_element import *
 from pages.web_page import WebPage
-from pages.realworld_example.main_page.main_page import MainPage
+from pages.main_page.main_page import MainPage
 from models.user import User
 import allure
 

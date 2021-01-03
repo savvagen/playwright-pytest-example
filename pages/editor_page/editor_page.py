@@ -1,7 +1,7 @@
 from pages.web_page import WebPage
-from playwright.sync_api import Page
 from elements.playwright_element import *
-from pages.realworld_example.article_page.article_page import ArticlePage
+from pages.article_page.article_page import ArticlePage
+from models.article import Article
 import allure
 
 
@@ -22,16 +22,12 @@ class EditorPage(WebPage):
         self.page.goto("%s/#/editor" % self.base_url, waitUntil="load")
         return self
 
-    @allure.step("Publish article: {title}")
-    def publish_article(self, title, subject, body, tags="test"):
+    @allure.step("Publish article: {article.title}")
+    def publish_article(self, article: Article):
         self.publish_button().shouldBeVisible()
-        self.title_field().setValue(title)
-        self.subject_field().setValue(subject)
-        self.body_field().setValue(body)
-        self.tags_field().scrollIntoView().setValue(tags)
+        self.title_field().setValue(article.title)
+        self.subject_field().setValue(article.subject)
+        self.body_field().setValue(article.body)
+        self.tags_field().scrollIntoView().setValue(article.tags)
         self.publish_button().click()
-        # Extract Article ID from url
-        # url = self.page.url
-        # path = url.split("article/")[1]
-        # article_id = path.split("?")[0]
         return ArticlePage(self.base_url, None, self.page)

@@ -1,17 +1,12 @@
 import allure
 import pytest
-from playwright.sync_api import Page, Request, Browser
-from models.user import User
-from pages.realworld_example.registration_page.registration_page import RegistrationPage
-
-from faker import Faker
-
-fake = Faker(['en_US'])
-base_url = "https://react-redux.realworld.io"
-username = "savva.genchevskiy"
+from playwright.sync_api import Page, Browser
+from models.user import *
+from pages.registration_page.registration_page import RegistrationPage
+from test.test_base import *
 
 
-@pytest.yield_fixture(scope="function")
+@pytest.fixture(scope="function")
 def reporting_fixture(browser: Browser, request):
     p: Page = browser.newPage()  # browser.newPage(videosPath="video/")
     p.context.clearCookies()
@@ -31,7 +26,7 @@ def reporting_fixture(browser: Browser, request):
 def test_should_register_new_user(reporting_fixture):
     page: Page = reporting_fixture
     register_page = RegistrationPage(base_url, page)
-    user: User = User.fake_user()
+    user: User = fake_user()
     main_page = register_page.open().register_with(user)
     assert main_page.account_button(user.username).innerText() == user.username
     page.screenshot(path='screenshots/registered.png')

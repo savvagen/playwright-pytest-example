@@ -1,21 +1,11 @@
+import pytest, requests, allure
+import logging
 from playwright.sync_api import Page
-import pytest, requests, time, allure
-from pages.realworld_example.editor_page.editor_page import EditorPage
-from pages.realworld_example.article_page.article_page import ArticlePage
-from pages.realworld_example.login_page.login_page import LoginPage
-from pages.realworld_example.main_page.main_page import MainPage
-from pages.realworld_example.settings_page.settings_page import SettingsPage
-
-
-base_url = "https://react-redux.realworld.io"
-username = "savva.genchevskiy"
-password = "test.12345678"
-
-article = {
-    'title': 'Python Playwright Demo',
-    'subject': 'Playwright Demo',
-    'body': "\n# Hello World\n\nSome `text` \n\nSome function:\n```\ndef function():\n     pass\n```\n"
-}
+from pages.editor_page.editor_page import EditorPage
+from pages.main_page.main_page import MainPage
+from test.test_base import *
+from models.article import *
+logger = logging.getLogger(__name__)
 
 
 def login_with_api(email, password):
@@ -24,21 +14,23 @@ def login_with_api(email, password):
     return requests.post("https://conduit.productionready.io/api/users/login", json=json, headers=headers)
 
 
-@pytest.yield_fixture(scope="function") # scope="module" - to run all tests in one browser context
+@pytest.fixture(scope="function")  # scope="module" - to run all tests in one browser context
 def log_in_fixture(browser, request):
     p: Page = browser.newPage()  # browser.newPage(videosPath="video/")
     # A) SetUp from Cookies
     resp = login_with_api(username+"@gmail.com", password)
-    cookie = {"name": "__cfduid", "value": resp.cookies.get('__cfduid'), "domain": ".productionready.io", "path": "/",
-              "httpOnly": True, "sameSite": "Lax"}
-    playwright_cookies = [cookie]
+    cookie = {"name": "__cfduid",
+              "value": resp.cookies.get('__cfduid'),
+              "domain": ".productionready.io",
+              "path": "/", "httpOnly": True, "sameSite": "Lax"}
     # 3. Open Web Page
     main_page = MainPage(base_url, p).open()
     # 4. Set Cookies and put JWT token to Local Storage
     p.evaluate("(t) => { localStorage.setItem('jwt', `${t}`) }", arg=resp.json()['user']['token'])
-    p.context.addCookies(playwright_cookies)
+    p.context.addCookies([cookie])
     # 5. Enjoy!!! Reload Page as Logged In User
     main_page.page.reload(waitUntil="load")
+    main_page.account_button(username).shouldBeVisible()
     # B) SetUp from UI
     # LoginPage(base_url, p).open().login(username+"@gmail.com", password)\
     #     .account_button(username).shouldBeVisible()
@@ -59,9 +51,10 @@ def log_in_fixture(browser, request):
 @pytest.mark.only_browser("chromium")
 def test_should_publish_article_from_main(log_in_fixture):
     p: Page = log_in_fixture
+    article = fake_article()
     editor_page = MainPage(base_url, p).open_editor()
-    article_page = editor_page.publish_article(article['title'], article['subject'], article['body'])
-    assert article_page.title().innerText() == article['title']
+    article_page = editor_page.publish_article(article)
+    assert article_page.title().innerText() == article.title
 
 
 @allure.feature("Article")
@@ -70,20 +63,20 @@ def test_should_publish_article_from_main(log_in_fixture):
 @pytest.mark.only_browser("chromium")
 def test_should_publish_article(log_in_fixture):
     p: Page = log_in_fixture
+    article: Article = fake_article()
     editor_page = EditorPage(base_url, p).open()
-    article_page = editor_page.publish_article(article['title'], article['subject'], article['body'])
-    assert article_page.title().shouldBeVisible().innerText() == article['title']
+    article_page = editor_page.publish_article(article)
+    assert article_page.title().shouldBeVisible().innerText() == article.title
 
 
-
-# def test_should_create_post(log_in_fixture):
-#     p: Page = log_in_fixture
-#     title = "Python Playwright Demo"
-#     body = "\n# Hello World\n\nSome `text` \n\nSome function:\n```\ndef function():\n     pass\n```\n"
-#     p.click('a[href="#editor"]')
-#     p.fill('input[placeholder="Article Title"]', title)
-#     p.fill('input[placeholder="What\'s this article about?"]', 'Playwright Demo')
-#     p.fill('textarea[placeholder="Write your article (in markdown)"]', body)
-#     p.click('text="Publish Article"')
-#     assert p.innerText("h1") == title
-#     p.screenshot(path='new_post.png')
+def test_should_create_post(log_in_fixture):
+    p: Page = log_in_fixture
+    title = "Python Playwright Demo"
+    body = "\n# Hello World\n\nSome `text` \n\nSome function:\n```\ndef function():\n     pass\n```\n"
+    p.click('a[href="#editor"]')
+    p.fill('input[placeholder="Article Title"]', title)
+    p.fill('input[placeholder="What\'s this article about?"]', 'Playwright Demo')
+    p.fill('textarea[placeholder="Write your article (in markdown)"]', body)
+    p.click('text="Publish Article"')
+    assert p.innerText("h1") == title
+    p.screenshot(path='screenshots/new_post.png')

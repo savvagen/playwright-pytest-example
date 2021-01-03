@@ -1,4 +1,4 @@
-name: Playwright E2E Tests
+name: Playwright Pytest Example
 
 on: [push, pull_request]
 
@@ -8,42 +8,61 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: microsoft/playwright-github-action@v1
+
+      - name: Install Node and Allure
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+      - run: npm install -g allure-commandline
+      - run: allure --version
+
+      #- name: Install Allure form source
+      #  run: |
+      #    wget --no-verbose -O /tmp/allure-2.13.2.zip https://dl.bintray.com/qameta/maven/io/qameta/allure/allure-commandline/2.13.2/allure-commandline-2.13.2.zip
+      #    unzip /tmp/allure-2.13.2.zip -d /home/runner
+      #    chmod -R +x /home/runner/allure-2.13.2/bin
+      #    echo "/home/runner/allure-2.13.2/bin" >> $GITHUB_PATH
+
       - name: Set Up Python 3.7
         uses: actions/setup-python@v2
         with:
           python-version: 3.7.7
+
       - name: Install pipenv
         uses: dschep/install-pipenv-action@v1
-
-      - name: Install allure
-        run: |
-          wget --no-verbose -O /tmp/allure-2.13.2.zip https://dl.bintray.com/qameta/maven/io/qameta/allure/allure-commandline/2.13.2/allure-commandline-2.13.2.zip
-          unzip /tmp/allure-2.13.2.zip -d /home/runner
-          chmod -R +x /home/runner/allure-2.13.2/bin
-          echo "/home/runner/allure-2.13.2/bin" >> $GITHUB_PATH
 
       - name: Run Tests
         run: |
           pipenv install --dev
           pipenv run python -m playwright install
-          cd test/realworld_example
-          pipenv run pytest login_tests.py --alluredir=./allure-results -n 1
-          pipenv run allure generate
 
-      #- name: Install Requirements
-      #  run: pip install -r requirements.txt
-      #- name: Run Tests
-      #  run: |
-      #    cd test/realworld_example
-      #    pipenv run pytest login_tests.py article_tests.py registration_tests.py --alluredir=./allure-results -n 1
-      #    allure generate
+      #- name: Generate report
+      #  if: always()
+      #  run: pipenv run allure generate
 
-      - uses: actions/upload-artifact@v2
+      # https://github.com/marketplace/actions/allure-report-with-history
+      - name: Get Allure history
+        uses: actions/checkout@v2
+        if: always()
+        continue-on-error: true
         with:
-          name: screenshots
-          path: test/realworld_example/screenshots/*.png
+          ref: gh-pages
+          path: gh-pages
 
-      - uses: actions/upload-artifact@v2
+      - name: Allure Report action from marketplace
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        #id: allure-report
         with:
-          name: allure-report
-          path: test/realworld_example/allure-report/
+          allure_results: allure-results
+          #gh_pages: gh-pages
+          #allure_report: allure-report
+          allure_history: allure-history
+
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: allure-history
