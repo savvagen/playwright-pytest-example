@@ -1,0 +1,41 @@
+[ {
+  "uid" : "dade19fda30f4369",
+  "name" : "Logout from System",
+  "time" : {
+    "start" : 1609705340611,
+    "stop" : 1609705341760,
+    "duration" : 1149
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d519379043db4439",
+  "name" : "test_should_login[chromium]",
+  "time" : {
+    "start" : 1609705341920,
+    "stop" : 1609705343033,
+    "duration" : 1113
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "53e7843bea730d95",
+  "name" : "Login With Invalid Credentials",
+  "time" : {
+    "start" : 1609705339490,
+    "stop" : 1609705340461,
+    "duration" : 971
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1d9ecee8ace2b7a2",
+  "name" : "Login With Valid Credentials",
+  "time" : {
+    "start" : 1609705337800,
+    "stop" : 1609705339345,
+    "duration" : 1545
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

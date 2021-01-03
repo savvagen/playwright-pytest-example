@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Jan 03 20:22:17 GMT 2021","Sun Jan 03 20:22:19 GMT 2021","1545","test","login_tests","","","","Login With Valid Credentials",""
+"passed","Sun Jan 03 20:22:19 GMT 2021","Sun Jan 03 20:22:20 GMT 2021","971","test","login_tests","","","","Login With Invalid Credentials",""
+"passed","Sun Jan 03 20:22:20 GMT 2021","Sun Jan 03 20:22:21 GMT 2021","1149","test","login_tests","","","","Logout from System",""
+"passed","Sun Jan 03 20:22:21 GMT 2021","Sun Jan 03 20:22:23 GMT 2021","1113","test","login_tests","","","","test_should_login[chromium]",""

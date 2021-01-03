@@ -1,0 +1,61 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "test.login_tests",
+    "children" : [ {
+      "name" : "Login With Valid Credentials",
+      "uid" : "1d9ecee8ace2b7a2",
+      "parentUid" : "a689871e67f822f8203ab69a11313f59",
+      "status" : "passed",
+      "time" : {
+        "start" : 1609705337800,
+        "stop" : 1609705339345,
+        "duration" : 1545
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'chromium'" ]
+    }, {
+      "name" : "Login With Invalid Credentials",
+      "uid" : "53e7843bea730d95",
+      "parentUid" : "a689871e67f822f8203ab69a11313f59",
+      "status" : "passed",
+      "time" : {
+        "start" : 1609705339490,
+        "stop" : 1609705340461,
+        "duration" : 971
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'chromium'" ]
+    }, {
+      "name" : "Logout from System",
+      "uid" : "dade19fda30f4369",
+      "parentUid" : "a689871e67f822f8203ab69a11313f59",
+      "status" : "passed",
+      "time" : {
+        "start" : 1609705340611,
+        "stop" : 1609705341760,
+        "duration" : 1149
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'chromium'" ]
+    }, {
+      "name" : "test_should_login[chromium]",
+      "uid" : "d519379043db4439",
+      "parentUid" : "a689871e67f822f8203ab69a11313f59",
+      "status" : "passed",
+      "time" : {
+        "start" : 1609705341920,
+        "stop" : 1609705343033,
+        "duration" : 1113
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'chromium'" ]
+    } ],
+    "uid" : "test.login_tests"
+  } ],
+  "name" : "packages"
+}

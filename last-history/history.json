@@ -1,0 +1,82 @@
+{
+  "40caf79206c8d17f3471119ddfdc240c" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "dade19fda30f4369",
+      "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/69//#testresult/dade19fda30f4369",
+      "status" : "passed",
+      "time" : {
+        "start" : 1609705340611,
+        "stop" : 1609705341760,
+        "duration" : 1149
+      }
+    } ]
+  },
+  "4bb1588416fae4361bc0ed96b48aecf7" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1d9ecee8ace2b7a2",
+      "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/69//#testresult/1d9ecee8ace2b7a2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1609705337800,
+        "stop" : 1609705339345,
+        "duration" : 1545
+      }
+    } ]
+  },
+  "62ef428aff3ef4671618b0876acadc55" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "d519379043db4439",
+      "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/69//#testresult/d519379043db4439",
+      "status" : "passed",
+      "time" : {
+        "start" : 1609705341920,
+        "stop" : 1609705343033,
+        "duration" : 1113
+      }
+    } ]
+  },
+  "5a71e7853e830290f60f1f8cb24fb377" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "53e7843bea730d95",
+      "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/69//#testresult/53e7843bea730d95",
+      "status" : "passed",
+      "time" : {
+        "start" : 1609705339490,
+        "stop" : 1609705340461,
+        "duration" : 971
+      }
+    } ]
+  }
+}

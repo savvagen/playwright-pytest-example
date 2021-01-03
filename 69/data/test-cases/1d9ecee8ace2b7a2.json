@@ -1,0 +1,317 @@
+{
+  "uid" : "1d9ecee8ace2b7a2",
+  "name" : "Login With Valid Credentials",
+  "fullName" : "test.login_tests#test_should_login_to_system",
+  "historyId" : "4bb1588416fae4361bc0ed96b48aecf7",
+  "time" : {
+    "start" : 1609705337800,
+    "stop" : 1609705339345,
+    "duration" : 1545
+  },
+  "descriptionHtml" : "\n<h1>Main Login Scenario</h1>\n<h3>Test Description</h3>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1609705337123,
+      "stop" : 1609705337123,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "logout_fixture",
+    "time" : {
+      "start" : 1609705337741,
+      "stop" : 1609705337799,
+      "duration" : 58
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1609705337122,
+      "stop" : 1609705337122,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser_name",
+    "time" : {
+      "start" : 1609705337465,
+      "stop" : 1609705337465,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1609705337123,
+      "stop" : 1609705337141,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1609705337465,
+      "stop" : 1609705337741,
+      "duration" : 276
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "playwright",
+    "time" : {
+      "start" : 1609705337141,
+      "stop" : 1609705337464,
+      "duration" : 323
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser_type_launch_args",
+    "time" : {
+      "start" : 1609705337464,
+      "stop" : 1609705337464,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "pytestconfig",
+    "time" : {
+      "start" : 1609705337141,
+      "stop" : 1609705337141,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "launch_browser",
+    "time" : {
+      "start" : 1609705337465,
+      "stop" : 1609705337465,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "descriptionHtml" : "\n<h1>Main Login Scenario</h1>\n<h3>Test Description</h3>\n",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "open",
+      "time" : {
+        "start" : 1609705337800,
+        "stop" : 1609705338542,
+        "duration" : 742
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Login user with email: \"'savva.genchevskiy@gmail.com'\", password: \"'test.12345678'\"",
+      "time" : {
+        "start" : 1609705338542,
+        "stop" : 1609705338623,
+        "duration" : 81
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "'savva.genchevskiy@gmail.com'"
+      }, {
+        "name" : "password",
+        "value" : "'test.12345678'"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "logout_fixture::0",
+    "time" : {
+      "start" : 1609705339345,
+      "stop" : 1609705339441,
+      "duration" : 96
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "14fcbf659f6cc78",
+      "name" : "test_should_login_to_system[chromium]",
+      "source" : "14fcbf659f6cc78.png",
+      "type" : "image/png",
+      "size" : 22760
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "browser::0",
+    "time" : {
+      "start" : 1609705343047,
+      "stop" : 1609705343074,
+      "duration" : 27
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "playwright::0",
+    "time" : {
+      "start" : 1609705343076,
+      "stop" : 1609705343087,
+      "duration" : 11
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Login"
+  }, {
+    "name" : "story",
+    "value" : "Login Flow"
+  }, {
+    "name" : "tag",
+    "value" : "flaky(reruns=2, reruns_delay=2)"
+  }, {
+    "name" : "tag",
+    "value" : "only_browser('chromium')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "login_tests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az92-196"
+  }, {
+    "name" : "thread",
+    "value" : "9673-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.login_tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser_name",
+    "value" : "'chromium'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "flaky(reruns=2, reruns_delay=2)", "only_browser('chromium')" ]
+  },
+  "source" : "1d9ecee8ace2b7a2.json",
+  "parameterValues" : [ "'chromium'" ]
+}
