@@ -35,6 +35,10 @@ jobs:
         run: |
           pipenv install --dev
           pipenv run python -m playwright install
+          mkdir -p test/screenshots
+          mkdir -p test/video
+          cd test/
+          pipenv run pytest login_tests.py registration_tests.py article_tests.py --alluredir=../allure-results
 
       #- name: Generate report
       #  if: always()
