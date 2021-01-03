@@ -45,9 +45,9 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: screenshots
-          path: ./screenshots/*.png
+          path: test/screenshots/*.png
 
       - uses: actions/upload-artifact@v2
         with:
           name: allure-report
-          path: ./allure-report/
+          path: test/allure-report/
