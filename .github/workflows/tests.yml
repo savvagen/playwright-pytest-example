@@ -21,6 +21,8 @@ jobs:
         run: |
           pipenv install --dev
           pipenv run python -m playwright install
+          mkdir -p test/screenshots
+          mkdir -p test/video
           pipenv run pytest test/login_tests.py --alluredir=./allure-results
           pipenv run allure generate
 
