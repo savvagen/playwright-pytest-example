@@ -8,7 +8,8 @@ from test.test_base import *
 # yield_fixture(scope="function") #### To run all test in separated browsers (Fixture Is Running for every test)
 @pytest.fixture(scope="function")
 def logout_fixture(browser: Browser, request):
-    p: Page = browser.newPage()  # browser.newPage(videosPath="video/")
+    # p: Page = browser.newPage()
+    p: Page = browser.newPage(videosPath="video/")
     p.context.clearCookies()
     yield p
     # Logout
@@ -17,10 +18,10 @@ def logout_fixture(browser: Browser, request):
     #     settings_page = main_page.open_settings()
     #     settings_page.logout()
     screenshot = p.screenshot(path=f"screenshots/{request.node.name}.png", fullPage=True)
-    # video = p.video.path()
+    video = p.video.path()
     p.close()
     allure.attach(screenshot, name=f"{request.node.name}", attachment_type=allure.attachment_type.PNG)
-    # allure.attach.file(f'./{video}', attachment_type=allure.attachment_type.WEBM)
+    allure.attach.file(f'./{video}', attachment_type=allure.attachment_type.WEBM)
 
 
 @allure.feature("Login")
