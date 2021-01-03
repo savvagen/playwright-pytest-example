@@ -20,7 +20,7 @@ jobs:
       - name: Run Tests
         run: |
           pipenv install --dev
-          python -m playwright install
+          pipenv run python -m playwright install
           pipenv run pytest test/login_tests.py --alluredir=./allure-results
           pipenv run allure generate
 
