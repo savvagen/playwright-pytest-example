@@ -1,6 +1,5 @@
 name: Playwright Pytest Example
 
-# on: [push, pull_request]
 on:
   push:
     branches: [ master ]
