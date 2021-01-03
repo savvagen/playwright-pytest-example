@@ -1,0 +1,121 @@
+[ {
+  "uid" : "530c7e8a92c34663",
+  "name" : "Register With new User",
+  "time" : {
+    "start" : 1609713437532,
+    "stop" : 1609713438505,
+    "duration" : 973
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ba7d9e610a910f23",
+  "name" : "Register With Invalid Creds",
+  "time" : {
+    "start" : 1609713439577,
+    "stop" : 1609713440432,
+    "duration" : 855
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1183596bf927645e",
+  "name" : "Register With Invalid Creds",
+  "time" : {
+    "start" : 1609713447178,
+    "stop" : 1609713448020,
+    "duration" : 842
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b28e6ae58ecb90b1",
+  "name" : "test_should_login[chromium]",
+  "time" : {
+    "start" : 1609713436654,
+    "stop" : 1609713437490,
+    "duration" : 836
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9a31a2ebabd84283",
+  "name" : "test_should_create_post[chromium]",
+  "time" : {
+    "start" : 1609713445962,
+    "stop" : 1609713447028,
+    "duration" : 1066
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "26856b43eaa707ad",
+  "name" : "Publish Article Flow from MainPage",
+  "time" : {
+    "start" : 1609713441416,
+    "stop" : 1609713442485,
+    "duration" : 1069
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "655214164e112dbc",
+  "name" : "Login With Valid Credentials",
+  "time" : {
+    "start" : 1609713431290,
+    "stop" : 1609713432265,
+    "duration" : 975
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "64492018b4181e67",
+  "name" : "Register With Existing Profile",
+  "time" : {
+    "start" : 1609713438625,
+    "stop" : 1609713439448,
+    "duration" : 823
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f13dccf528500890",
+  "name" : "Login With Invalid Credentials",
+  "time" : {
+    "start" : 1609713433074,
+    "stop" : 1609713433889,
+    "duration" : 815
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "86a8f0a03bc58ee6",
+  "name" : "Logout from System",
+  "time" : {
+    "start" : 1609713434622,
+    "stop" : 1609713435667,
+    "duration" : 1045
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1ca302219b050bc1",
+  "name" : "Publish Article Flow from ArticlePage",
+  "time" : {
+    "start" : 1609713443652,
+    "stop" : 1609713444773,
+    "duration" : 1121
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3e438f77208136d6",
+  "name" : "Register With Invalid Creds",
+  "time" : {
+    "start" : 1609713448155,
+    "stop" : 1609713449031,
+    "duration" : 876
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
