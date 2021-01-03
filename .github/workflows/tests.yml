@@ -7,42 +7,40 @@ on:
 
 jobs:
   e2e-tests:
-    runs-on: python-3.6-alpine
+#    runs-on: python-3.6-alpine
+#    steps:
+#      - name: Install Requirements
+#        run: apk add --update nodejs npm openjdk8 && npm install -g allure-commandline
+
+    runs-on: ubuntu-latest # ubuntu-latest or macos-latest, windows-latest
     steps:
-      - name: Install Requirements
-        run: apk add --update nodejs npm openjdk8 && npm install -g allure-commandline
+      - uses: actions/checkout@v2
+      - uses: microsoft/playwright-github-action@v1
+
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+      - run: npm install -g allure-commandline
+      - run: allure --version
+
+      - name: Set Up Python 3.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7.7
+
+      - name: Install pipenv
+        uses: dschep/install-pipenv-action@v1
+
       - name: Run Tests
         run: |
-          cd test/realworld_example
-          pipenv run pytest login_tests.py article_tests.py registration_tests.py --alluredir=./allure-results
+          pipenv install --dev
+          pipenv run python -m playwright install
+          mkdir -p test/screenshots
+          mkdir -p test/video
+          cd test/
+          pipenv run pytest login_tests.py --alluredir=./allure-results
           allure generate
-
-#    steps:
-#      - uses: actions/checkout@v2
-#      - uses: microsoft/playwright-github-action@v1
-#      - name: Set Up Python 3.7
-#        uses: actions/setup-python@v2
-#        with:
-#          python-version: 3.7.7
-#      - name: Install pipenv
-#        uses: dschep/install-pipenv-action@v1
-#      - name: Run Tests
-#        run: |
-#          pipenv install --dev
-#          pipenv run python -m playwright install
-#          mkdir -p test/screenshots
-#          mkdir -p test/video
-#          cd test/
-#          pipenv run pytest login_tests.py --alluredir=./allure-results
-#          allure generate
-
-      #- name: Install Requirements
-      #  run: pip install -r requirements.txt
-      #- name: Run Tests
-      #  run: |
-      #    cd test/realworld_example
-      #    pipenv run pytest login_tests.py article_tests.py registration_tests.py --alluredir=./allure-results -n 1
-      #    allure generate
 
       - uses: actions/upload-artifact@v2
         with:
