@@ -11,6 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: microsoft/playwright-github-action@v1
+
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+      - run: npm install allure-commandline
+
       - name: Set Up Python 3.7
         uses: actions/setup-python@v2
         with:
@@ -25,7 +32,7 @@ jobs:
           mkdir -p test/video
           cd test/
           pipenv run pytest login_tests.py --alluredir=./allure-results
-          pipenv run allure generate
+          allure generate
 
       #- name: Install Requirements
       #  run: pip install -r requirements.txt
