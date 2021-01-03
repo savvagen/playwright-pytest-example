@@ -1,0 +1,177 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "test",
+    "children" : [ {
+      "name" : "login_tests",
+      "children" : [ {
+        "name" : "Login With Valid Credentials",
+        "uid" : "168be003d7554eac",
+        "parentUid" : "b8ff5cc3928b43f2a33af3d8ad7970c1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609713196421,
+          "stop" : 1609713198018,
+          "duration" : 1597
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'" ]
+      }, {
+        "name" : "Login With Invalid Credentials",
+        "uid" : "c910e61ca6924d87",
+        "parentUid" : "b8ff5cc3928b43f2a33af3d8ad7970c1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609713199061,
+          "stop" : 1609713199972,
+          "duration" : 911
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'" ]
+      }, {
+        "name" : "Logout from System",
+        "uid" : "ba7880251b302c37",
+        "parentUid" : "b8ff5cc3928b43f2a33af3d8ad7970c1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609713200764,
+          "stop" : 1609713201930,
+          "duration" : 1166
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'" ]
+      }, {
+        "name" : "test_should_login[chromium]",
+        "uid" : "1c0696a8d343dfd9",
+        "parentUid" : "b8ff5cc3928b43f2a33af3d8ad7970c1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609713203014,
+          "stop" : 1609713204166,
+          "duration" : 1152
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'" ]
+      } ],
+      "uid" : "b8ff5cc3928b43f2a33af3d8ad7970c1"
+    }, {
+      "name" : "registration_tests",
+      "children" : [ {
+        "name" : "Register With new User",
+        "uid" : "37d108020f2eca0",
+        "parentUid" : "7b8b9047c42bf07618c769954c9eea06",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609713204210,
+          "stop" : 1609713205432,
+          "duration" : 1222
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'" ]
+      }, {
+        "name" : "Register With Existing Profile",
+        "uid" : "e8fc73d5ddc7ebd1",
+        "parentUid" : "7b8b9047c42bf07618c769954c9eea06",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609713205540,
+          "stop" : 1609713206585,
+          "duration" : 1045
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'" ]
+      }, {
+        "name" : "Register With Invalid Creds",
+        "uid" : "5feabb6360ffa069",
+        "parentUid" : "7b8b9047c42bf07618c769954c9eea06",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609713206710,
+          "stop" : 1609713207874,
+          "duration" : 1164
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'", "'username can't be blankis too short (minimum is 1 character)'", "<models.user.User object at 0x7fc8ac619910>" ]
+      }, {
+        "name" : "Register With Invalid Creds",
+        "uid" : "4d6626db1d839966",
+        "parentUid" : "7b8b9047c42bf07618c769954c9eea06",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609713215245,
+          "stop" : 1609713216256,
+          "duration" : 1011
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'", "'password is too short (minimum is 8 characters)'", "<models.user.User object at 0x7fc8ac619d10>" ]
+      }, {
+        "name" : "Register With Invalid Creds",
+        "uid" : "8df7949ca6f0941",
+        "parentUid" : "7b8b9047c42bf07618c769954c9eea06",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609713216378,
+          "stop" : 1609713217390,
+          "duration" : 1012
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'", "'username is too long (maximum is 20 characters)'", "<models.user.User object at 0x7fc8ac6199d0>" ]
+      } ],
+      "uid" : "7b8b9047c42bf07618c769954c9eea06"
+    }, {
+      "name" : "article_tests",
+      "children" : [ {
+        "name" : "Publish Article Flow from MainPage",
+        "uid" : "154853bc9ee57b44",
+        "parentUid" : "efe2ddd92765d0f7fb1e1fe5cee89b75",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609713209208,
+          "stop" : 1609713210197,
+          "duration" : 989
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'" ]
+      }, {
+        "name" : "Publish Article Flow from ArticlePage",
+        "uid" : "aea678c0222b711f",
+        "parentUid" : "efe2ddd92765d0f7fb1e1fe5cee89b75",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609713211722,
+          "stop" : 1609713212644,
+          "duration" : 922
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'" ]
+      }, {
+        "name" : "test_should_create_post[chromium]",
+        "uid" : "4be9dbeae64c1575",
+        "parentUid" : "efe2ddd92765d0f7fb1e1fe5cee89b75",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609713214044,
+          "stop" : 1609713215090,
+          "duration" : 1046
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'" ]
+      } ],
+      "uid" : "efe2ddd92765d0f7fb1e1fe5cee89b75"
+    } ],
+    "uid" : "ff2b04dbb9c449a4d40723f51d841925"
+  } ],
+  "name" : "suites"
+}

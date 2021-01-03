@@ -1,0 +1,371 @@
+{
+  "uid" : "4d6626db1d839966",
+  "name" : "Register With Invalid Creds",
+  "fullName" : "test.registration_tests#test_should_not_register_with_invalid_creds",
+  "historyId" : "31438ff0d6c41394cdf99b207c9a14e9",
+  "time" : {
+    "start" : 1609713215245,
+    "stop" : 1609713216256,
+    "duration" : 1011
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "launch_browser",
+    "time" : {
+      "start" : 1609713196156,
+      "stop" : 1609713196156,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "reporting_fixture",
+    "time" : {
+      "start" : 1609713215210,
+      "stop" : 1609713215243,
+      "duration" : 33
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1609713195885,
+      "stop" : 1609713195885,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser_type_launch_args",
+    "time" : {
+      "start" : 1609713196156,
+      "stop" : 1609713196156,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1609713195885,
+      "stop" : 1609713195899,
+      "duration" : 14
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "pytestconfig",
+    "time" : {
+      "start" : 1609713195900,
+      "stop" : 1609713195900,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "playwright",
+    "time" : {
+      "start" : 1609713195900,
+      "stop" : 1609713196155,
+      "duration" : 255
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser_name",
+    "time" : {
+      "start" : 1609713196156,
+      "stop" : 1609713196156,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1609713196157,
+      "stop" : 1609713196358,
+      "duration" : 201
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1609713195884,
+      "stop" : 1609713195885,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open Login Page",
+      "time" : {
+        "start" : 1609713215245,
+        "stop" : 1609713215705,
+        "duration" : 460
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Register with: <models.user.User object at 0x7fc8ac619d10>",
+      "time" : {
+        "start" : 1609713215705,
+        "stop" : 1609713215824,
+        "duration" : 119
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "user",
+        "value" : "<models.user.User object at 0x7fc8ac619d10>"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "reporting_fixture::0",
+    "time" : {
+      "start" : 1609713216258,
+      "stop" : 1609713216345,
+      "duration" : 87
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "5f3d38945d4e7740",
+      "name" : "test_should_not_register_with_invalid_creds[chromium-user1-password is too short (minimum is 8 characters)]",
+      "source" : "5f3d38945d4e7740.png",
+      "type" : "image/png",
+      "size" : 29061
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "playwright::0",
+    "time" : {
+      "start" : 1609713217554,
+      "stop" : 1609713217561,
+      "duration" : 7
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser::0",
+    "time" : {
+      "start" : 1609713217479,
+      "stop" : 1609713217552,
+      "duration" : 73
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "Invalid Registration"
+  }, {
+    "name" : "feature",
+    "value" : "Registration"
+  }, {
+    "name" : "tag",
+    "value" : "only_browser('chromium')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "registration_tests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az92-196"
+  }, {
+    "name" : "thread",
+    "value" : "9355-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.registration_tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser_name",
+    "value" : "'chromium'"
+  }, {
+    "name" : "error_text",
+    "value" : "'password is too short (minimum is 8 characters)'"
+  }, {
+    "name" : "user",
+    "value" : "<models.user.User object at 0x7fc8ac619d10>"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 6,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "53b876d1acc3ae33",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/78//#testresult/53b876d1acc3ae33",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609712925957,
+          "stop" : 1609712926918,
+          "duration" : 961
+        }
+      }, {
+        "uid" : "e27cab89ead8cb88",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/77//#testresult/e27cab89ead8cb88",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609712552752,
+          "stop" : 1609712553678,
+          "duration" : 926
+        }
+      }, {
+        "uid" : "433c94249cbac297",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/74//#testresult/433c94249cbac297",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609711049184,
+          "stop" : 1609711050044,
+          "duration" : 860
+        }
+      }, {
+        "uid" : "13d3af1cc2ecf3fe",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/73//#testresult/13d3af1cc2ecf3fe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609709012392,
+          "stop" : 1609709013242,
+          "duration" : 850
+        }
+      }, {
+        "uid" : "83759b0ce70afdf7",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/72//#testresult/83759b0ce70afdf7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609708892334,
+          "stop" : 1609708893292,
+          "duration" : 958
+        }
+      } ]
+    },
+    "tags" : [ "only_browser('chromium')" ]
+  },
+  "source" : "4d6626db1d839966.json",
+  "parameterValues" : [ "'chromium'", "'password is too short (minimum is 8 characters)'", "<models.user.User object at 0x7fc8ac619d10>" ]
+}

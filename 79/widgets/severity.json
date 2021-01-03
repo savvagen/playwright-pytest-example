@@ -1,0 +1,121 @@
+[ {
+  "uid" : "168be003d7554eac",
+  "name" : "Login With Valid Credentials",
+  "time" : {
+    "start" : 1609713196421,
+    "stop" : 1609713198018,
+    "duration" : 1597
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ba7880251b302c37",
+  "name" : "Logout from System",
+  "time" : {
+    "start" : 1609713200764,
+    "stop" : 1609713201930,
+    "duration" : 1166
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4be9dbeae64c1575",
+  "name" : "test_should_create_post[chromium]",
+  "time" : {
+    "start" : 1609713214044,
+    "stop" : 1609713215090,
+    "duration" : 1046
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8df7949ca6f0941",
+  "name" : "Register With Invalid Creds",
+  "time" : {
+    "start" : 1609713216378,
+    "stop" : 1609713217390,
+    "duration" : 1012
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e8fc73d5ddc7ebd1",
+  "name" : "Register With Existing Profile",
+  "time" : {
+    "start" : 1609713205540,
+    "stop" : 1609713206585,
+    "duration" : 1045
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "aea678c0222b711f",
+  "name" : "Publish Article Flow from ArticlePage",
+  "time" : {
+    "start" : 1609713211722,
+    "stop" : 1609713212644,
+    "duration" : 922
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c910e61ca6924d87",
+  "name" : "Login With Invalid Credentials",
+  "time" : {
+    "start" : 1609713199061,
+    "stop" : 1609713199972,
+    "duration" : 911
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5feabb6360ffa069",
+  "name" : "Register With Invalid Creds",
+  "time" : {
+    "start" : 1609713206710,
+    "stop" : 1609713207874,
+    "duration" : 1164
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1c0696a8d343dfd9",
+  "name" : "test_should_login[chromium]",
+  "time" : {
+    "start" : 1609713203014,
+    "stop" : 1609713204166,
+    "duration" : 1152
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "154853bc9ee57b44",
+  "name" : "Publish Article Flow from MainPage",
+  "time" : {
+    "start" : 1609713209208,
+    "stop" : 1609713210197,
+    "duration" : 989
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "37d108020f2eca0",
+  "name" : "Register With new User",
+  "time" : {
+    "start" : 1609713204210,
+    "stop" : 1609713205432,
+    "duration" : 1222
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4d6626db1d839966",
+  "name" : "Register With Invalid Creds",
+  "time" : {
+    "start" : 1609713215245,
+    "stop" : 1609713216256,
+    "duration" : 1011
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
