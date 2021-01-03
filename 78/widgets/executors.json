@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://savvagen.github.io/playwright-pytest-example",
+  "buildOrder" : 78,
+  "buildName" : "GitHub Actions Run #459833268",
+  "buildUrl" : "https://github.com/savvagen/playwright-pytest-example/actions/runs/459833268",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/78/"
+} ]
