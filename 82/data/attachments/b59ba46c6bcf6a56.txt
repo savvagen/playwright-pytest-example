@@ -1,0 +1,2 @@
+INFO     test:main_page_tests.py:27 Python Playwright Demo
+INFO     test:main_page_tests.py:31 Sign in
