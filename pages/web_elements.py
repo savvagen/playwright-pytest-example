@@ -23,9 +23,16 @@ class MyPageObject:
     # 2. Returns wrapped element by element value
     def my_element(self): return el(self.page, el=<element_handle>) 
     
-    # 3. Returns elements_collection object which keeps the list of elements
+    # 3. Returns elements_collection object which keeps the list of elements_handles
     # and introduces interface for working with elements collections(size, index, texts, sorting, etc..)
-    def my_element_collection(self): return els(self.page, selector='.my-container .article') 
+    def my_elements_collection(self): return els(self.page, selector='.my-container .article') 
+
+    # 4. Returns elements_collection object which keeps element objects like:
+    #   * WebElement
+    #   * PageObjectContainer(WebElement)
+    # Introduces interface for working with elements collections(size, index, texts, sorting, etc..)
+    def my_web_elements_collection(self): return elc(self.page, selector='.my-container .article', element_container=WebElement) 
+    def my_page_objects_collection(self): return els(self.page, selector='.my-container .article', element_container=main_page.Article) 
 
 '''
 el = lambda page, selector=None, element=None: WebElement(page, selector, element)
