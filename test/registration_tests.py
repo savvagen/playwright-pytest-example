@@ -1,18 +1,19 @@
 import allure
 import pytest
 from playwright.sync_api import Page, Browser
-from models.user import *
+from models.user import User, fake_user
 from pages.registration_page.registration_page import RegistrationPage
 from test.test_base import *
 
 
 @pytest.fixture(scope="function")
 def reporting_fixture(browser: Browser, request):
-    p: Page = browser.newPage()  # browser.newPage(videosPath="video/")
-    p.context.clearCookies()
+    p: Page = browser.new_page()
+    # p: Page = browser.new_page(record_video_dir="video/")
+    p.context.clear_cookies()
     yield p
-    screenshot = p.screenshot(path=f"screenshots/{request.node.name}.png", fullPage=True)
-    # video = p.video.path()
+    screenshot = p.screenshot(path=f"screenshots/{request.node.name}.png", full_page=True)
+    #cvideo = p.video.path()
     p.close()
     allure.attach(screenshot, name=f"{request.node.name}", attachment_type=allure.attachment_type.PNG)
     # allure.attach.file(f'./{video}', attachment_type=allure.attachment_type.WEBM)
@@ -28,9 +29,8 @@ def test_should_register_new_user(reporting_fixture):
     register_page = RegistrationPage(base_url, page)
     user: User = fake_user()
     main_page = register_page.open().register_with(user)
-    assert main_page.account_button(user.username).innerText() == user.username
+    assert main_page.account_button(user.username).inner_text() == user.username
     page.screenshot(path='screenshots/registered.png')
-
 
 
 @allure.feature("Registration")
@@ -43,8 +43,7 @@ def test_should_not_register_with_same_creds(reporting_fixture):
     user: User = User(username=username, email=f"{username}@gmail.com", password="12345678")
     register_page = register_page.open()
     register_page.register_with(user)
-    assert register_page.error_message().innerText() == "email has already been taken\nusername has already been taken"
-
+    assert register_page.error_message().inner_text() == "email has already been taken\nusername has already been taken"
 
 
 @allure.feature("Registration")
@@ -70,4 +69,4 @@ def test_should_not_register_with_invalid_creds(reporting_fixture, user, error_t
     register_page = RegistrationPage(base_url, page)
     register_page = register_page.open()
     register_page.register_with(user)
-    assert error_text in register_page.error_message().innerText()
+    assert error_text in register_page.error_message().inner_text()

@@ -1,14 +1,12 @@
-from playwright.sync_api import Page
-from playwright.sync_api import ElementHandle
-from elements.playwright_element import *
+from pages.web_elements import *
 
 
 class WebPage(object):
     def __init__(self, page: Page):
         self.page = page
 
-    def deleteCookies(self):
-        self.page.context.clearCookies()
+    def delete_cookies(self):
+        self.page.context.clear_cookies()
 
     def reload(self):
-        self.page.reload(waitUntil="load")
+        self.page.reload(wait_until="load")

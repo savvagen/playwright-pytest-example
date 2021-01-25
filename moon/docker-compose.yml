@@ -32,8 +32,3 @@ services:
 #    ports:
 #      - "9090:9090"
 
-  qapropeller:
-    container_name: qapropeller
-    image: "qapropeller/qa-battle:latest"
-    ports:
-      - "8081:8080"

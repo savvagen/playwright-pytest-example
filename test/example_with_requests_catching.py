@@ -1,14 +1,16 @@
-from playwright import sync_playwright
+import time
+
+from playwright.sync_api import sync_playwright, Route
 from playwright.sync_api import Request
 from pages.login_page.login_page import LoginPage
-from models.user import User
 from pages.main_page.main_page import MainPage
+from models.user import User, fake_user
 from test.test_base import *
 
 
 with sync_playwright() as p:
     browser = p.chromium.launch(headless=False)
-    page = browser.newPage()
+    page = browser.new_page()
 
     login_page = LoginPage(base_url, page)
     login_page.open()
@@ -16,7 +18,7 @@ with sync_playwright() as p:
 
     def log_and_continue_request(route, request: Request):
         print(request.url)
-        print(request.postData)
+        print(request.post_data)
         route.continue_()
     page.route('**', lambda route, request: log_and_continue_request(route, request))
 
@@ -46,7 +48,7 @@ with sync_playwright() as p:
 
 # with sync_playwright() as p:
 #     browser = p.chromium.launch(headless=False)
-#     page = browser.newPage()
+#     page = browser.new_page()
 #
 #     def print_requests(request: Request):
 #         print(request.url)
@@ -55,7 +57,7 @@ with sync_playwright() as p:
 #
 #     def filter_requests(route: Route, request: Request):
 #         # 1. Replace all images on parrot image
-#         if route.request.resourceType != 'image':
+#         if route.request.resource_type != 'image':
 #             return route.continue_()
 #         else:
 #             lorem_flickr = "https://loremflickr.com"

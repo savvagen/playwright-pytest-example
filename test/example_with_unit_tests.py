@@ -1,7 +1,6 @@
 from unittest import TestCase
-from playwright import sync_playwright
+from playwright.sync_api import sync_playwright
 from test.test_base import *
-
 
 
 class MyViewTests(TestCase):
@@ -27,13 +26,13 @@ class MyViewTests(TestCase):
         self.playwright.stop()
 
     def test_login(self):
-        page = self.browser.newPage()
-        page.context.clearCookies()
+        page = self.browser.new_page()
+        page.context.clear_cookies()
         page.goto('%s/#/login' % base_url)
         page.fill('input[type="email"]', "%s@gmail.com" % username)
         page.fill('input[type="password"]', password)
         page.click('button[type="submit"]')  # page.click('text="Sign in"')
-        assert page.innerText('a[href="#@%s"]' % username) == username
+        assert page.inner_text('a[href="#@%s"]' % username) == username
         assert "%s/#/" % base_url in page.url
         page.screenshot(path='screenshots/logged_in.png')
         page.close()

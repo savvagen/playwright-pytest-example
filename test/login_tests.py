@@ -8,16 +8,16 @@ from test.test_base import *
 # yield_fixture(scope="function") #### To run all test in separated browsers (Fixture Is Running for every test)
 @pytest.fixture(scope="function")
 def logout_fixture(browser: Browser, request):
-    # p: Page = browser.newPage()
-    p: Page = browser.newPage(videosPath="video/")
-    p.context.clearCookies()
+    # p: Page = browser.new_page()
+    p: Page = browser.new_page(record_video_dir="video/")
+    p.context.clear_cookies()
     yield p
     # Logout
     # main_page = MainPage(base_url, p)
-    # if p.innerText(main_page.account_button(username).selector) is not None or "":
+    # if p.inner_text(main_page.account_button(username).selector) is not None or "":
     #     settings_page = main_page.open_settings()
     #     settings_page.logout()
-    screenshot = p.screenshot(path=f"screenshots/{request.node.name}.png", fullPage=True)
+    screenshot = p.screenshot(path=f"screenshots/{request.node.name}.png", full_page=True)
     video = p.video.path()
     p.close()
     allure.attach(screenshot, name=f"{request.node.name}", attachment_type=allure.attachment_type.PNG)
@@ -37,7 +37,7 @@ def test_should_login_to_system(logout_fixture):
     page: Page = logout_fixture
     login_page = LoginPage(base_url, page)
     main_page = login_page.open().login("%s@gmail.com" % username, password)
-    assert main_page.account_button(username).innerText() == username
+    assert main_page.account_button(username).inner_text() == username
     assert "%s/#/" % base_url in page.url
 
 
@@ -49,9 +49,9 @@ def test_should_not_login_with_invalid_credentials(logout_fixture):
     page: Page = logout_fixture
     login_page = LoginPage(base_url, page)
     login_page.open().login("%s@gmail.comm" % username, password)
-    assert login_page.error_message().innerText() == "email or password is invalid"
+    assert login_page.error_message().inner_text() == "email or password is invalid"
     assert login_page.email_filed().value() == "%s@gmail.comm" % username
-    assert login_page.submit_button().isEnabled()
+    assert login_page.submit_button().is_enabled()
     assert "%s/#/login" % base_url in page.url
 
 
@@ -66,13 +66,13 @@ def test_should_logout_from_system(logout_fixture):
         .login("%s@gmail.com" % username, password) \
         .open_settings() \
         .logout()
-    assert main_page.login_button().innerText() == "Sign in"
-    assert main_page.register_button().innerText() == "Sign up"
+    assert main_page.login_button().inner_text() == "Sign in"
+    assert main_page.register_button().inner_text() == "Sign up"
 
 
 @pytest.mark.only_browser("chromium")
 def test_should_login(page: Page):
-    page.context.clearCookies()
+    page.context.clear_cookies()
     page.goto('%s/#/login' % base_url)
     page.fill('input[type="email"]', "%s@gmail.com" % username)
     page.fill('input[type="password"]', password)
@@ -84,7 +84,7 @@ def test_should_login(page: Page):
     # s('input[type="email"]').fill("%s@gmail.com" % username)
     # s('input[type="password"]').fill("S.gench19021992")
     # s('button[type="submit"]').click()
-    assert page.waitForSelector('a[href="#@%s"]' % username).innerText() == username
-    assert page.innerText('a[href="#@%s"]' % username) == username
+    assert page.wait_for_selector('a[href="#@%s"]' % username).inner_text() == username
+    assert page.inner_text('a[href="#@%s"]' % username) == username
     assert "%s/#/" % base_url in page.url
     page.screenshot(path='screenshots/logged_in.png')

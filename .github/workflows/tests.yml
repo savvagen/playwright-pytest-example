@@ -42,7 +42,7 @@ jobs:
           mkdir -p test/screenshots
           mkdir -p test/video
           cd test/
-          pipenv run pytest login_tests.py registration_tests.py article_tests.py --alluredir=../allure-results
+          pipenv run pytest login_tests.py registration_tests.py article_tests.py main_page_tests.py --alluredir=../allure-results
 
       #- name: Generate report
       #  if: always()

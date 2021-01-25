@@ -1,5 +1,5 @@
 import requests
-from playwright import sync_playwright
+from playwright.sync_api import sync_playwright
 from pages.main_page.main_page import MainPage
 import time
 from test.test_base import *
@@ -16,7 +16,7 @@ with sync_playwright() as p:
 
     # 2. Launch Browser Context
     browser = p.chromium.launch(headless=False)
-    page = browser.newPage()
+    page = browser.new_page()
 
     cookie = {"name": "__cfduid",
               "value": resp.cookies.get('__cfduid'),
@@ -29,7 +29,7 @@ with sync_playwright() as p:
 
     # 4. Set Cookies and put JWT token to Local Storage
     page.evaluate("(t) => { localStorage.setItem('jwt', `${t}`) }", arg=resp.json()['user']['token'])
-    page.context.addCookies([cookie])
+    page.context.add_cookies([cookie])
     st = page.evaluate('''()=> { return localStorage.getItem('jwt')} ''')
     print("Local Storage JWT")
     print(st)
