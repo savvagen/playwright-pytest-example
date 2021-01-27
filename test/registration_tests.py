@@ -13,7 +13,7 @@ def reporting_fixture(browser: Browser, request):
     p.context.clear_cookies()
     yield p
     screenshot = p.screenshot(path=f"screenshots/{request.node.name}.png", full_page=True)
-    #cvideo = p.video.path()
+    # video = p.video.path()
     p.close()
     allure.attach(screenshot, name=f"{request.node.name}", attachment_type=allure.attachment_type.PNG)
     # allure.attach.file(f'./{video}', attachment_type=allure.attachment_type.WEBM)
