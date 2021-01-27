@@ -11,7 +11,7 @@
 
 ## Running Tests
 
-Go to test directory: `test`
+Go to `test` directory
 
 #### Run Tests in 1 thread
 ``` 
