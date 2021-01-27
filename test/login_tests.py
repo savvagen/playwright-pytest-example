@@ -32,7 +32,7 @@ def logout_fixture(browser: Browser, request):
 <h3>Test Description</h3>
 """)
 @pytest.mark.flaky(reruns=2, reruns_delay=2)
-@pytest.mark.only_browser("chromium")
+# @pytest.mark.only_browser("chromium")
 def test_should_login_to_system(logout_fixture):
     page: Page = logout_fixture
     login_page = LoginPage(base_url, page)
