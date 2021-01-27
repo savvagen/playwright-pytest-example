@@ -17,7 +17,6 @@ class MainPage(WebPage):
     def __init__(self, base_url, page: Page):
         super().__init__(page)
         self.base_url = base_url
-        # self.articles_list = Articles(self.page)
 
     # Open Main Page
     @allure.step
@@ -50,39 +49,20 @@ class MainPage(WebPage):
         return EditorPage(self.base_url, self.page)
 
 
-class Article(WebElement):
-
-    def __init__(self, page: Page, element: ElementHandle):
-        super().__init__(page, selector=None, element=element)
-
-    def title(self): return el(self.page, element=self.element_handle.query_selector("h1"))
-    def body(self): return el(self.page, element=self.element_handle.query_selector("p"))
-
-
 class NavBar(WebElement):
 
     def __init__(self, page: Page, selector):
         super().__init__(page, selector=selector, element=None)
 
-    def home_button(self): return el(self.page, selector="text='Home'")
-    def login_button(self): return el(self.page, selector="text='Sign in'")
-    def register_button(self): return el(self.page, selector="text='Sign up'")
+    def home_button(self): return el(self.page, element=self.element.query_selector("text='Home'"))
+    def login_button(self): return el(self.page, element=self.element.query_selector("text='Sign in'"))
+    def register_button(self): return el(self.page, element=self.element.query_selector("text='Sign up'"))
 
-# class Articles:
-#
-#     def __init__(self, page: Page):
-#         self.page = page
-#
-#     def size(self): return self.articles().size()
-#     def articles(self): return els(self.page, selector=".article-preview")
-#     def get(self, index): return Article(self.page, self.articles().get(index))
-#
-#
-# class Article:
-#
-#     def __init__(self, page: Page, element_handle: ElementHandle):
-#         self.page = page
-#         self.element_handle = element_handle
-#
-#     def title(self): return el(self.page, element=self.element_handle.query_selector("h1"))
-#     def body(self): return el(self.page, element=self.element_handle.query_selector("p"))
+
+class Article(WebElement):
+
+    def __init__(self, page: Page, element: ElementHandle):
+        super().__init__(page, selector=None, element=element)
+
+    def title(self): return el(self.page, element=self.element.query_selector("h1"))
+    def body(self): return el(self.page, element=self.element.query_selector("p"))

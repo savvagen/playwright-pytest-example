@@ -13,22 +13,22 @@ def test_find_element_list(page: Page):
     main_page = MainPage(base_url, page)
     main_page.delete_cookies()
     main_page.open()
-
+    # Wait articles and page to be loaded
     main_page.loader().should_be_visible()
     main_page.loader().should_be_hidden()
-
     assert main_page.register_button().is_visible()
     pattern = re.compile(".*")
-
+    # Check articles
     assert main_page.articles().size() == 10
     assert main_page.articles().get(1).is_visible()
     assert pattern.match(main_page.articles().get(1).title().inner_text())
     assert pattern.match(main_page.articles().get(1).body().inner_text())
     logger.info(main_page.articles().get(2).title().inner_text())
-
+    # Check nav panel
     assert main_page.nav_bar().is_visible()
     assert main_page.nav_bar().login_button().is_visible()
     logger.info(main_page.nav_bar().login_button().inner_text())
+    logger.info(main_page.nav_bar().register_button().inner_text())
 
     # articles = page.querySelectorAll(".article-preview")
     # assert len(articles) == 10

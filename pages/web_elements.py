@@ -1,8 +1,13 @@
 from playwright.sync_api import Page, ElementHandle
-from typing import List
+import sys
 import logging
-logger = logging.getLogger("test")
+from typing import List
+if sys.version_info >= (3, 8):  # pragma: no cover
+    from typing import Literal
+else:  # pragma: no cover
+    from typing_extensions import Literal
 
+logger = logging.getLogger("test")
 
 
 s = lambda page, selector: page.query_selector(selector)
@@ -42,22 +47,20 @@ elc = lambda page, elements, element_container: WebElementsCollection(page, elem
 
 class WebElement:
 
-    def __init__(self, page: Page,
-                 selector: str = None,
-                 element: ElementHandle = None):
+    def __init__(self, page: Page, selector: str = None, element: ElementHandle = None):
         self.page = page
         if selector is not None and element is None:
             self.selector = selector
-            self.element_handle: ElementHandle = self.page.query_selector(selector)
+            self.element: ElementHandle = self.page.query_selector(selector)
         elif element is not None and selector is None:
             self.selector = None
-            self.element_handle: ElementHandle = element
+            self.element: ElementHandle = element
         else:
-            raise Exception(f"Element or Selector is not defined. Please enter arguments: 'selector' or 'element'  {str(type(selector))} ; {str(type(element))}")
+            raise Exception(f"Element or Selector is not defined. Please enter arguments: 'selector=<str>' or 'element=<ElementHandle>'")
 
     def set_value(self, text):
         if self.selector is None:
-            self.element_handle.fill(text)
+            self.element.fill(text)
         else:
             self.page.fill(self.selector, text)
         return self
@@ -68,8 +71,8 @@ class WebElement:
 
     def send_keys(self, text, delay=10):
         if self.selector is None:
-            self.element_handle.wait_for_element_state(state="visible")
-            self.element_handle.type(text, delay=delay)
+            self.element.wait_for_element_state(state="visible")
+            self.element.type(text, delay=delay)
         else:
             self.page.wait_for_selector(self.selector, state="visible")
             self.page.type(self.selector, text, delay=delay)
@@ -77,21 +80,21 @@ class WebElement:
 
     def click(self):
         if self.selector is None:
-            self.element_handle.click()
+            self.element.click()
         else:
             self.page.click(self.selector)
         return self
 
     def should_be_visible(self):
         if self.selector is None:
-            self.element_handle.wait_for_element_state(state="visible")
+            self.element.wait_for_element_state(state="visible")
         else:
             self.page.wait_for_selector(self.selector, state="visible")
         return self
 
     def should_be_hidden(self):
         if self.selector is None:
-            self.element_handle.wait_for_element_state(state="hidden")
+            self.element.wait_for_element_state(state="hidden")
         else:
             self.page.wait_for_selector(self.selector, state="hidden")
         return self
@@ -100,33 +103,33 @@ class WebElement:
         # if not self.page.evaluate('''(el) => { return el.disabled }''', arg=self.element_handle):
         #     return True
         if self.selector is None:
-            return self.element_handle.is_enabled()
+            return self.element.is_enabled()
         else:
             return self.page.is_enabled(self.selector)
 
     def is_visible(self):
         if self.selector is None:
-            return self.element_handle.is_visible()
+            return self.element.is_visible()
         else:
             return self.page.is_visible(self.selector)
 
     def is_displayed(self):
         if self.selector is None:
-            return self.element_handle.is_disabled()
+            return self.element.is_disabled()
         else:
             return self.page.is_disabled(self.selector)
 
     def is_checked(self):
         if self.selector is None:
-            return self.element_handle.is_checked()
+            return self.element.is_checked()
         else:
             return self.page.is_checked(self.selector)
 
     def value(self):
         if self.selector is None:
-            return self.element_handle.evaluate('''(el) => { return el.value }''')
+            return self.element.evaluate('''(el) => { return el.value }''')
         else:
-            return self.page.evaluate('''(el) => { return el.value }''', arg=self.element_handle)
+            return self.page.evaluate('''(el) => { return el.value }''', arg=self.element)
 
     def press_tab(self):
         self.page.keyboard.press('Tab')
@@ -138,17 +141,26 @@ class WebElement:
 
     def inner_text(self):
         if self.selector is None:
-            self.element_handle.wait_for_element_state(state="visible")
-            return self.element_handle.inner_text()
+            self.element.wait_for_element_state(state="visible")
+            return self.element.inner_text()
         else:
             self.page.wait_for_selector(self.selector, state="visible")
             return self.page.inner_text(self.selector)
 
-    def scroll_into_view(self):
+    def scroll_into_view(self, behavior: Literal["auto", "smooth", "instant"] = "auto",
+                         block: Literal["start", "center", "end", "nearest"] = "center",
+                         inline: Literal["start", "center", "end", "nearest"] = "nearest"):
         if self.selector is None:
-            return self.element_handle.evaluate('''el => { el.scrollIntoView({behavior: \"auto\", block: \"center\", inline: \"nearest\"}); }''')
+            return self.element.evaluate(expression='''el => { el.scrollIntoView({behavior: \"%s\", block: \"%s\", inline: \"%s\"}); }''' % (behavior, block, inline))
         else:
-            self.page.eval_on_selector(self.selector, '''(el) => { el.scrollIntoView({behavior: \"auto\", block: \"center\", inline: \"nearest\"}); }''')
+            self.page.eval_on_selector(self.selector, expression='''(el) => { el.scrollIntoView({behavior: \"%s\", block: \"%s\", inline: \"%s\"}); }''' % (behavior, block, inline))
+        return self
+
+    def scroll_into_view_if_needed(self):
+        if self.selector is None:
+            self.element.scroll_into_view_if_needed()
+        else:
+            self.page.query_selector(self.selector).scroll_into_view_if_needed()
         return self
 
 
@@ -186,7 +198,7 @@ class WebElementsCollection:
         return len(self.elements)
 
     def get(self, index):
-        # logger.info(self.obj_class) # expected output: <class 'pages.main_page.main_page.Article'>
+        # logger.info(self.container_class) # expected output: <class 'pages.main_page.main_page.Article'>
         return self.container_class(page=self.page, element=self.elements[index])
 
     def get_inner_texts(self):
@@ -194,7 +206,3 @@ class WebElementsCollection:
             return el.inner_text()
         texts = list(map(el_text, self.elements))
         return texts
-
-
-
-
