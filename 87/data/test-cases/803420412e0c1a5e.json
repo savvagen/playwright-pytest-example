@@ -1,0 +1,400 @@
+{
+  "uid" : "803420412e0c1a5e",
+  "name" : "test_should_create_post[chromium]",
+  "fullName" : "test.article_tests#test_should_create_post",
+  "historyId" : "8f27151234dfccf58f896063b41d29b0",
+  "time" : {
+    "start" : 1611750973204,
+    "stop" : 1611750975851,
+    "duration" : 2647
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "log_in_fixture",
+    "time" : {
+      "start" : 1611750971911,
+      "stop" : 1611750973203,
+      "duration" : 1292
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "open",
+      "time" : {
+        "start" : 1611750972304,
+        "stop" : 1611750972739,
+        "duration" : 435
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1611750963235,
+      "stop" : 1611750963235,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "playwright",
+    "time" : {
+      "start" : 1611750963236,
+      "stop" : 1611750963769,
+      "duration" : 533
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1611750963208,
+      "stop" : 1611750963235,
+      "duration" : 27
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser_type_launch_args",
+    "time" : {
+      "start" : 1611750963770,
+      "stop" : 1611750963770,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser_name",
+    "time" : {
+      "start" : 1611750963773,
+      "stop" : 1611750963773,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "pytestconfig",
+    "time" : {
+      "start" : 1611750963236,
+      "stop" : 1611750963236,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "launch_browser",
+    "time" : {
+      "start" : 1611750963773,
+      "stop" : 1611750963773,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1611750963773,
+      "stop" : 1611750964181,
+      "duration" : 408
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1611750963236,
+      "stop" : 1611750963236,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "log_in_fixture::0",
+    "time" : {
+      "start" : 1611750975853,
+      "stop" : 1611750975991,
+      "duration" : 138
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "ab6cf630dc5a3139",
+      "name" : "test_should_create_post[chromium]",
+      "source" : "ab6cf630dc5a3139.png",
+      "type" : "image/png",
+      "size" : 54359
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "playwright::0",
+    "time" : {
+      "start" : 1611750977186,
+      "stop" : 1611750977195,
+      "duration" : 9
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser::0",
+    "time" : {
+      "start" : 1611750977173,
+      "stop" : 1611750977184,
+      "duration" : 11
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "article_tests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az135-367"
+  }, {
+    "name" : "thread",
+    "value" : "9375-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.article_tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser_name",
+    "value" : "'chromium'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 14,
+        "unknown" : 0,
+        "total" : 14
+      },
+      "items" : [ {
+        "uid" : "1f6b9ca3dab7daa5",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/86//#testresult/1f6b9ca3dab7daa5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611750874134,
+          "stop" : 1611750875405,
+          "duration" : 1271
+        }
+      }, {
+        "uid" : "4619efe40db3b3f0",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/85//#testresult/4619efe40db3b3f0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611748474246,
+          "stop" : 1611748476323,
+          "duration" : 2077
+        }
+      }, {
+        "uid" : "37c64b85cec79f52",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/84//#testresult/37c64b85cec79f52",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611738520505,
+          "stop" : 1611738521573,
+          "duration" : 1068
+        }
+      }, {
+        "uid" : "203a49b33b51ce95",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/83//#testresult/203a49b33b51ce95",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611738472468,
+          "stop" : 1611738473634,
+          "duration" : 1166
+        }
+      }, {
+        "uid" : "f8010a2ea1d8a9fc",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/82//#testresult/f8010a2ea1d8a9fc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611577180402,
+          "stop" : 1611577181533,
+          "duration" : 1131
+        }
+      }, {
+        "uid" : "626bfcd7b8139a0b",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/81//#testresult/626bfcd7b8139a0b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611576406710,
+          "stop" : 1611576407907,
+          "duration" : 1197
+        }
+      }, {
+        "uid" : "9a31a2ebabd84283",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/80//#testresult/9a31a2ebabd84283",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609713445962,
+          "stop" : 1609713447028,
+          "duration" : 1066
+        }
+      }, {
+        "uid" : "4be9dbeae64c1575",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/79//#testresult/4be9dbeae64c1575",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609713214044,
+          "stop" : 1609713215090,
+          "duration" : 1046
+        }
+      }, {
+        "uid" : "4097392ac6aaeb70",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/78//#testresult/4097392ac6aaeb70",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609712924535,
+          "stop" : 1609712925781,
+          "duration" : 1246
+        }
+      }, {
+        "uid" : "47a07095a72edeab",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/77//#testresult/47a07095a72edeab",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609712551410,
+          "stop" : 1609712552585,
+          "duration" : 1175
+        }
+      }, {
+        "uid" : "adf9376085bdec59",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/74//#testresult/adf9376085bdec59",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609711047859,
+          "stop" : 1609711048986,
+          "duration" : 1127
+        }
+      }, {
+        "uid" : "d3a1feadc7d7e799",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/73//#testresult/d3a1feadc7d7e799",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609709010973,
+          "stop" : 1609709012216,
+          "duration" : 1243
+        }
+      }, {
+        "uid" : "132d79a0504e1170",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/72//#testresult/132d79a0504e1170",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609708890978,
+          "stop" : 1609708892142,
+          "duration" : 1164
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "803420412e0c1a5e.json",
+  "parameterValues" : [ "'chromium'" ]
+}
