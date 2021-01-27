@@ -1,0 +1,422 @@
+{
+  "uid" : "cd3ade858701c371",
+  "name" : "Register With new User",
+  "fullName" : "test.registration_tests#test_should_register_new_user",
+  "historyId" : "95eaa13e43be5b2bdb375b354b9035ce",
+  "time" : {
+    "start" : 1611748469987,
+    "stop" : 1611748471166,
+    "duration" : 1179
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "browser_name",
+    "time" : {
+      "start" : 1611748464765,
+      "stop" : 1611748464765,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "playwright",
+    "time" : {
+      "start" : 1611748464465,
+      "stop" : 1611748464764,
+      "duration" : 299
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1611748464445,
+      "stop" : 1611748464465,
+      "duration" : 20
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "launch_browser",
+    "time" : {
+      "start" : 1611748464765,
+      "stop" : 1611748464765,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1611748464765,
+      "stop" : 1611748465241,
+      "duration" : 476
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "reporting_fixture",
+    "time" : {
+      "start" : 1611748469923,
+      "stop" : 1611748469987,
+      "duration" : 64
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser_type_launch_args",
+    "time" : {
+      "start" : 1611748464764,
+      "stop" : 1611748464765,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "pytestconfig",
+    "time" : {
+      "start" : 1611748464465,
+      "stop" : 1611748464465,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1611748464465,
+      "stop" : 1611748464465,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1611748464465,
+      "stop" : 1611748464465,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open Login Page",
+      "time" : {
+        "start" : 1611748469988,
+        "stop" : 1611748470375,
+        "duration" : 387
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Register with: <models.user.User object at 0x7f19b68f7c90>",
+      "time" : {
+        "start" : 1611748470375,
+        "stop" : 1611748470647,
+        "duration" : 272
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "user",
+        "value" : "<models.user.User object at 0x7f19b68f7c90>"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "playwright::0",
+    "time" : {
+      "start" : 1611748478274,
+      "stop" : 1611748478287,
+      "duration" : 13
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser::0",
+    "time" : {
+      "start" : 1611748478255,
+      "stop" : 1611748478272,
+      "duration" : 17
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "reporting_fixture::0",
+    "time" : {
+      "start" : 1611748471166,
+      "stop" : 1611748471351,
+      "duration" : 185
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "a9a53b89ae1b8e8f",
+      "name" : "test_should_register_new_user[chromium]",
+      "source" : "a9a53b89ae1b8e8f.png",
+      "type" : "image/png",
+      "size" : 20922
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "Valid Registration"
+  }, {
+    "name" : "feature",
+    "value" : "Registration"
+  }, {
+    "name" : "tag",
+    "value" : "flaky(reruns=2, reruns_delay=2)"
+  }, {
+    "name" : "tag",
+    "value" : "only_browser('chromium')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "registration_tests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az71-569"
+  }, {
+    "name" : "thread",
+    "value" : "9312-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.registration_tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser_name",
+    "value" : "'chromium'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 12,
+        "unknown" : 0,
+        "total" : 12
+      },
+      "items" : [ {
+        "uid" : "ab9940ceb1b6e93b",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/84//#testresult/ab9940ceb1b6e93b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611738511739,
+          "stop" : 1611738512755,
+          "duration" : 1016
+        }
+      }, {
+        "uid" : "53caf3999becdaad",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/83//#testresult/53caf3999becdaad",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611738462312,
+          "stop" : 1611738464394,
+          "duration" : 2082
+        }
+      }, {
+        "uid" : "f15e3787cfd68377",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/82//#testresult/f15e3787cfd68377",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611577171048,
+          "stop" : 1611577172017,
+          "duration" : 969
+        }
+      }, {
+        "uid" : "cf0a2a212aed35e9",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/81//#testresult/cf0a2a212aed35e9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611576396428,
+          "stop" : 1611576397608,
+          "duration" : 1180
+        }
+      }, {
+        "uid" : "530c7e8a92c34663",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/80//#testresult/530c7e8a92c34663",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609713437532,
+          "stop" : 1609713438505,
+          "duration" : 973
+        }
+      }, {
+        "uid" : "37d108020f2eca0",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/79//#testresult/37d108020f2eca0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609713204210,
+          "stop" : 1609713205432,
+          "duration" : 1222
+        }
+      }, {
+        "uid" : "4c2c3ff7d0476455",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/78//#testresult/4c2c3ff7d0476455",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609712914874,
+          "stop" : 1609712915903,
+          "duration" : 1029
+        }
+      }, {
+        "uid" : "a341f078f685ccd0",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/77//#testresult/a341f078f685ccd0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609712542985,
+          "stop" : 1609712543981,
+          "duration" : 996
+        }
+      }, {
+        "uid" : "ebe30eadec31af49",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/74//#testresult/ebe30eadec31af49",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609711038704,
+          "stop" : 1609711039707,
+          "duration" : 1003
+        }
+      }, {
+        "uid" : "92e3107e5ca4cbc8",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/73//#testresult/92e3107e5ca4cbc8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609709001313,
+          "stop" : 1609709002331,
+          "duration" : 1018
+        }
+      }, {
+        "uid" : "40c026a5dcfac2e1",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/72//#testresult/40c026a5dcfac2e1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609708882033,
+          "stop" : 1609708883024,
+          "duration" : 991
+        }
+      } ]
+    },
+    "tags" : [ "flaky(reruns=2, reruns_delay=2)", "only_browser('chromium')" ]
+  },
+  "source" : "cd3ade858701c371.json",
+  "parameterValues" : [ "'chromium'" ]
+}
