@@ -49,6 +49,7 @@ def log_in_fixture(browser, request):
 @allure.story("Publish Article")
 @allure.title("Publish Article Flow from MainPage")
 @allure.severity(allure.severity_level.CRITICAL)
+@pytest.mark.only_browser("chromium")
 def test_should_publish_article_from_main(log_in_fixture):
     p: Page = log_in_fixture
     article = fake_article()
@@ -60,6 +61,7 @@ def test_should_publish_article_from_main(log_in_fixture):
 @allure.feature("Article")
 @allure.story("Publish Article")
 @allure.title("Publish Article Flow from ArticlePage")
+@pytest.mark.only_browser("chromium")
 def test_should_publish_article(log_in_fixture):
     p: Page = log_in_fixture
     article: Article = fake_article()
@@ -68,6 +70,7 @@ def test_should_publish_article(log_in_fixture):
     assert article_page.title().should_be_visible().inner_text() == article.title
 
 
+@pytest.mark.only_browser("chromium")
 def test_should_create_post(log_in_fixture):
     p: Page = log_in_fixture
     title = "Python Playwright Demo"
