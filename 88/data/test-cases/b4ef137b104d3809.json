@@ -1,0 +1,446 @@
+{
+  "uid" : "b4ef137b104d3809",
+  "name" : "Register With Existing Profile",
+  "fullName" : "test.registration_tests#test_should_not_register_with_same_creds",
+  "historyId" : "0aece6694ce6dbbb254475f75758714d",
+  "time" : {
+    "start" : 1611755588642,
+    "stop" : 1611755589818,
+    "duration" : 1176
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1611755582059,
+      "stop" : 1611755582087,
+      "duration" : 28
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "playwright",
+    "time" : {
+      "start" : 1611755582088,
+      "stop" : 1611755582618,
+      "duration" : 530
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "pytestconfig",
+    "time" : {
+      "start" : 1611755582087,
+      "stop" : 1611755582087,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1611755582087,
+      "stop" : 1611755582087,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser_type_launch_args",
+    "time" : {
+      "start" : 1611755582619,
+      "stop" : 1611755582619,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "reporting_fixture",
+    "time" : {
+      "start" : 1611755588566,
+      "stop" : 1611755588641,
+      "duration" : 75
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser_name",
+    "time" : {
+      "start" : 1611755582619,
+      "stop" : 1611755582619,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1611755582619,
+      "stop" : 1611755582998,
+      "duration" : 379
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1611755582087,
+      "stop" : 1611755582087,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "launch_browser",
+    "time" : {
+      "start" : 1611755582619,
+      "stop" : 1611755582619,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open Login Page",
+      "time" : {
+        "start" : 1611755588642,
+        "stop" : 1611755589094,
+        "duration" : 452
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Register with: <models.user.User object at 0x7fa1220ff8d0>",
+      "time" : {
+        "start" : 1611755589094,
+        "stop" : 1611755589321,
+        "duration" : 227
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "user",
+        "value" : "<models.user.User object at 0x7fa1220ff8d0>"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "playwright::0",
+    "time" : {
+      "start" : 1611755594562,
+      "stop" : 1611755594567,
+      "duration" : 5
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "reporting_fixture::0",
+    "time" : {
+      "start" : 1611755589819,
+      "stop" : 1611755589950,
+      "duration" : 131
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "7269a63c5e8654ac",
+      "name" : "test_should_not_register_with_same_creds[chromium]",
+      "source" : "7269a63c5e8654ac.png",
+      "type" : "image/png",
+      "size" : 31959
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "browser::0",
+    "time" : {
+      "start" : 1611755594546,
+      "stop" : 1611755594561,
+      "duration" : 15
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Registration"
+  }, {
+    "name" : "story",
+    "value" : "Invalid Registration"
+  }, {
+    "name" : "tag",
+    "value" : "only_browser('chromium')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "registration_tests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az40-951"
+  }, {
+    "name" : "thread",
+    "value" : "9340-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.registration_tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser_name",
+    "value" : "'chromium'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 15,
+        "unknown" : 0,
+        "total" : 15
+      },
+      "items" : [ {
+        "uid" : "2d2e5dd7e231578e",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/87//#testresult/2d2e5dd7e231578e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611750970233,
+          "stop" : 1611750971234,
+          "duration" : 1001
+        }
+      }, {
+        "uid" : "2fd9370062ec70bf",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/86//#testresult/2fd9370062ec70bf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611750865272,
+          "stop" : 1611750866377,
+          "duration" : 1105
+        }
+      }, {
+        "uid" : "920e743f926f73ba",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/85//#testresult/920e743f926f73ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611748471094,
+          "stop" : 1611748472221,
+          "duration" : 1127
+        }
+      }, {
+        "uid" : "dc6625ac8fc44011",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/84//#testresult/dc6625ac8fc44011",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611738512889,
+          "stop" : 1611738513712,
+          "duration" : 823
+        }
+      }, {
+        "uid" : "a44325383b4c371c",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/83//#testresult/a44325383b4c371c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611738464514,
+          "stop" : 1611738465458,
+          "duration" : 944
+        }
+      }, {
+        "uid" : "b760979824ddc2bd",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/82//#testresult/b760979824ddc2bd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611577172124,
+          "stop" : 1611577173082,
+          "duration" : 958
+        }
+      }, {
+        "uid" : "fc9e8c05fa5b7398",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/81//#testresult/fc9e8c05fa5b7398",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611576397750,
+          "stop" : 1611576398655,
+          "duration" : 905
+        }
+      }, {
+        "uid" : "64492018b4181e67",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/80//#testresult/64492018b4181e67",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609713438625,
+          "stop" : 1609713439448,
+          "duration" : 823
+        }
+      }, {
+        "uid" : "e8fc73d5ddc7ebd1",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/79//#testresult/e8fc73d5ddc7ebd1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609713205540,
+          "stop" : 1609713206585,
+          "duration" : 1045
+        }
+      }, {
+        "uid" : "3dd21dbed721b3d8",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/78//#testresult/3dd21dbed721b3d8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609712916030,
+          "stop" : 1609712917033,
+          "duration" : 1003
+        }
+      }, {
+        "uid" : "d984e39eb620770e",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/77//#testresult/d984e39eb620770e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609712544102,
+          "stop" : 1609712544969,
+          "duration" : 867
+        }
+      }, {
+        "uid" : "11fb5fc4237880c8",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/74//#testresult/11fb5fc4237880c8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609711039845,
+          "stop" : 1609711040787,
+          "duration" : 942
+        }
+      }, {
+        "uid" : "9676eda7b166f048",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/73//#testresult/9676eda7b166f048",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609709002463,
+          "stop" : 1609709003426,
+          "duration" : 963
+        }
+      }, {
+        "uid" : "b79b5fcc9da9dfea",
+        "reportUrl" : "https://savvagen.github.io/playwright-pytest-example/72//#testresult/b79b5fcc9da9dfea",
+        "status" : "passed",
+        "time" : {
+          "start" : 1609708883157,
+          "stop" : 1609708884081,
+          "duration" : 924
+        }
+      } ]
+    },
+    "tags" : [ "only_browser('chromium')" ]
+  },
+  "source" : "b4ef137b104d3809.json",
+  "parameterValues" : [ "'chromium'" ]
+}
